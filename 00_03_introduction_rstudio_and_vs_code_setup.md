@@ -1,9 +1,9 @@
-# 0.2) R, RStudio, and Visual Studio Code Guide
+# 0.3) R, RStudio, and Visual Studio Code Guide
 
 ---
 
-- Source: [00_02_introduction_rstudio_and_vs_code_setup.md](https://github.com/mmoessler/ukudla-intro-ds-public-material/blob/main/00_02_introduction_rstudio_and_vs_code_setup.md)
-- History: [Commit History](https://github.com/mmoessler/ukudla-intro-ds-public-material/commits/main/00_02_introduction_rstudio_and_vs_code_setup.md)
+- Source: [00_03_introduction_rstudio_and_vs_code_setup.md](https://github.com/mmoessler/ukudla-intro-ds-public-material/blob/main/00_03_introduction_rstudio_and_vs_code_setup.md)
+- History: [Commit History](https://github.com/mmoessler/ukudla-intro-ds-public-material/commits/main/00_03_introduction_rstudio_and_vs_code_setup.md)
 - Feedback: [Topic 00: Introduction](https://github.com/mmoessler/ukudla-intro-ds-public-material/discussions/1)
 
 ---

@@ -1,9 +1,9 @@
-# 0.1) Example Data Science Project
+# 0.2) Example Data Science Project
 
 ---
 
-- Source: [00_01_introduction_example_project.md](https://github.com/mmoessler/ukudla-intro-ds-public-material/blob/main/00_01_introduction_example_project.md)
-- History: [Commit History](https://github.com/mmoessler/ukudla-intro-ds-public-material/commits/main/00_01_introduction_example_project.md)
+- Source: [00_02_introduction_example_project.md](https://github.com/mmoessler/ukudla-intro-ds-public-material/blob/main/00_02_introduction_example_project.md)
+- History: [Commit History](https://github.com/mmoessler/ukudla-intro-ds-public-material/commits/main/00_02_introduction_example_project.md)
 - Feedback: [Topic 00: Introduction](https://github.com/mmoessler/ukudla-intro-ds-public-material/discussions/1)
 
 ---
@@ -12,6 +12,7 @@
 
 - [Outline](#outline)
 - [Overall philosophy](#overall-philosophy)
+- [Important caution about the example analysis](#important-caution-about-the-example-analysis)
 - [Learning objectives](#learning-objectives)
 - [Self-paced study](#self-paced-study)
 - [Topic structure](#topic-structure)
@@ -64,6 +65,24 @@ The project is an application and integration point, not the definition of the
 course. A laboratory or field project may collect primary data rather than
 download provider data, but it still needs version control, documentation,
 validation, preparation, analysis, and reproducible communication.
+
+---
+
+## Important caution about the example analysis
+
+> **Caution:** The maize-yield project is a developing teaching example, not a
+> validated scientific analysis or a basis for practical decisions. The team
+> is still working to identify defensible applications of the course topics,
+> particularly for descriptive, explanatory, and predictive analysis. The
+> current implementation contains substantial conceptual and analytical
+> limitations.
+
+Use the project to study workflow structure, reproducible implementation, and
+critical evaluation. Do not interpret its estimates as established evidence
+about maize-yield processes, causal effects, or future yields. Review the
+assumptions, study design, measurement scale, model specification, diagnostics,
+and scope of every analytical claim. The application and its conclusions may
+change as these limitations are reviewed and corrected.
 
 ---
 

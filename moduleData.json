@@ -18,15 +18,21 @@
                     "enabled": true
                 },
                 {
+                    "id": "course-development-feedback",
+                    "navTitle": "Development & Feedback",
+                    "pageFile": "00_01_introduction_workflow.md",
+                    "enabled": true
+                },
+                {
                     "id": "example-ds-project",
                     "navTitle": "Example DS Project",
-                    "pageFile": "00_01_introduction_example_project.md",
+                    "pageFile": "00_02_introduction_example_project.md",
                     "enabled": true
                 },
                 {
                     "id": "rstudio-vs-code",
                     "navTitle": "RStudio & VS Code",
-                    "pageFile": "00_02_introduction_rstudio_and_vs_code_setup.md",
+                    "pageFile": "00_03_introduction_rstudio_and_vs_code_setup.md",
                     "enabled": true
                 }
             ]
