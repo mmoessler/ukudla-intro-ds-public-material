@@ -2,7 +2,7 @@
 
 ---
 
-- Last Update: 2026-08-29
+- Last Update: 2026-09-03
 - Source: [04_05_data_management_tools_reference.md](/learning-modules/intro-ds-module/04_05_data_management_tools_reference.md)
 
 ---
@@ -11,8 +11,9 @@ This page is the detailed reference companion to
 [Documentation tools for data management](04_03_data_management_tools.md). Read
 that page first for the concepts — why plain text, how to choose Markdown,
 YAML, or CSV, and what a checksum establishes. This page collects the
-concrete syntax, a full checksum workflow, validation checks, the
-maize-yield application, common mistakes, and completion checklists.
+concrete syntax, a full checksum workflow, validation checks, a maize-yield
+worked example with transfer guidance, common mistakes, and completion
+checklists.
 
 ---
 
@@ -65,7 +66,7 @@ maize-yield application, common mistakes, and completion checklists.
   - [YAML checks](#yaml-checks)
   - [CSV checks](#csv-checks)
   - [Byte identity versus semantic equivalence](#byte-identity-versus-semantic-equivalence)
-- [Application to the maize-yield project](#application-to-the-maize-yield-project)
+- [Worked example: the maize-yield project](#worked-example-the-maize-yield-project)
   - [Example workflow](#example-workflow)
   - [Appropriate checksum targets](#appropriate-checksum-targets)
   - [Suggested validation responsibilities](#suggested-validation-responsibilities)
@@ -214,7 +215,7 @@ Avoid:
 For repository files, prefer relative links so that they work in different clones:
 
 ```markdown
-[Data dictionary](../metadata/data-dictionary.csv)
+`metadata/faostat-data-dictionary.csv`
 ```
 
 ---
@@ -353,7 +354,7 @@ Comments help maintainers, but programs normally discard them after parsing. Do 
 YAML is suitable when one artifact has nested provenance fields:
 
 ```yaml
-artifact: data-raw/faostat-maize-yield-sample.csv
+artifact: data/input/faostat-maize-yield-sample.csv
 provider: Food and Agriculture Organization of the United Nations
 dataset: Crops and Livestock Products
 accessed: "2026-08-03"
@@ -383,7 +384,7 @@ classifications:
   item: Agricultural commodity
   element: Statistical measure
 quality_flags:
-  local_code_list: metadata/flag-code-list.csv
+  local_code_list: metadata/faostat-flag-code-list.csv
 ```
 
 ---
@@ -614,8 +615,8 @@ Create a manifest for several stable files:
 ```bash
 sha256sum \
   metadata/source-metadata.yml \
-  metadata/data-dictionary.csv \
-  metadata/flag-code-list.csv \
+  metadata/faostat-data-dictionary.csv \
+  metadata/faostat-flag-code-list.csv \
   > metadata/checksums.sha256
 ```
 
@@ -755,7 +756,7 @@ Read with an explicit table parser:
 
 ```r
 dictionary <- readr::read_csv(
-  "metadata/data-dictionary.csv",
+  "metadata/faostat-data-dictionary.csv",
   show_col_types = FALSE
 )
 ```
@@ -813,7 +814,13 @@ Canonicalizing a file before hashing is possible, but it creates another specifi
 
 ---
 
-## Application to the maize-yield project
+## Worked example: the maize-yield project
+
+The formats and checksum methods above are general. The following section
+shows one concrete combination for secondary data. Laboratory projects can
+use the same formats for sample and assay documentation, field experiments for
+treatment and randomization records, and observational studies for sampling,
+site, visit, and measurement metadata.
 
 The project can use the formats as follows:
 
@@ -823,8 +830,8 @@ The project can use the formats as follows:
 | `docs/data-management.md` | Markdown | Repository-specific implementation guidance |
 | `metadata/source-metadata.yml` | YAML | Nested provider, methodology, scope, classification, and quality record |
 | `metadata/provenance.yml` | YAML | Structured identity and history of the fixed teaching artifact |
-| `metadata/data-dictionary.csv` | CSV | One row per field in the teaching extract |
-| `metadata/flag-code-list.csv` | CSV | One row per provider quality flag |
+| `metadata/faostat-data-dictionary.csv` | CSV | One row per field in the FAOSTAT teaching extract |
+| `metadata/faostat-flag-code-list.csv` | CSV | One row per FAOSTAT quality flag |
 | `metadata/checksums.sha256` | Checksum manifest | Expected byte identity of selected stable artifacts, if adopted |
 
 ---
@@ -1009,7 +1016,7 @@ Configuration syntax makes credentials look like ordinary fields. Keep secrets o
 7. Why should a failed checksum not be “fixed” immediately by generating a new expected value?
 8. How can two semantically equivalent YAML documents have different checksums?
 9. Why is storing a checksum beside a file insufficient against an attacker who can replace both?
-10. Which checks would you apply to `metadata/data-dictionary.csv` in addition to a checksum?
+10. Which checks would you apply to `metadata/faostat-data-dictionary.csv` in addition to a checksum?
 
 ---
 

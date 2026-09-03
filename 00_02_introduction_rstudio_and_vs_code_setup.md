@@ -16,9 +16,6 @@
   - [Windows](#windows)
   - [macOS](#macos)
   - [Linux](#linux)
-    - [Ubuntu / Debian](#ubuntu--debian)
-    - [Fedora](#fedora)
-    - [Arch Linux](#arch-linux)
 - [3. Installing RStudio](#3-installing-rstudio)
   - [Windows](#windows-1)
   - [macOS](#macos-1)
@@ -61,7 +58,7 @@ We recommend using:
 |-----------|---------|
 | **R** | Programming language for statistics and data science |
 | **RStudio** | Primary integrated development environment (IDE) for writing and running R code |
-| **Visual Studio Code** | General-purpose editor for Quarto, Markdown, documentation, and project files |
+| **Visual Studio Code** | General-purpose editor for Markdown, YAML, documentation, and project files |
 
 Most analyses will be completed in **RStudio**, while **VS Code** is useful for editing text files, browsing project folders, and working with Quarto documents.
 
@@ -103,36 +100,7 @@ Launch R from the Applications folder to verify the installation.
 
 Most Linux distributions provide R through their package manager.
 
----
-
-#### Ubuntu / Debian
-
-```bash
-sudo apt update
-sudo apt install r-base
-```
-
----
-
-#### Fedora
-
-```bash
-sudo dnf install R
-```
-
----
-
-#### Arch Linux
-
-```bash
-sudo pacman -S r
-```
-
-Verify:
-
-```bash
-R --version
-```
+For more information, please consult the web or your preferred LLM.
 
 ---
 
@@ -203,14 +171,15 @@ or use the package provided on the VS Code website.
 
 ## 5. Recommended VS Code Extensions
 
-Install the following extensions from the Extensions panel.
+Install the following extensions from the **Extensions** panel in VS Code.
 
-| Extension | Purpose |
-|-----------|---------|
-| Markdown All in One | Markdown editing |
-| GitLens | Git integration |
-| YAML | YAML editing |
-| EditorConfig | Consistent formatting |
+| Extension                        | Purpose                                      |
+| -------------------------------- | -------------------------------------------- |
+| Markdown All in One              | Markdown editing and productivity features   |
+| Markdown Preview Mermaid Support | Mermaid diagram support in Markdown previews |
+| Python                           | Python language support                      |
+
+Additional VS Code extensions are available in the [Visual Studio Marketplace](https://marketplace.visualstudio.com/).
 
 ---
 
@@ -283,7 +252,6 @@ VS Code complements RStudio rather than replacing it.
 Recommended uses include:
 
 - editing Markdown
-- editing Quarto documents
 - browsing project files
 - reading documentation
 - comparing files

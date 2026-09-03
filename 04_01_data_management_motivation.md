@@ -2,7 +2,7 @@
 
 ---
 
-- Last Update: 2026-08-29
+- Last Update: 2026-09-03
 - Source: [04_01_data_management_motivation.md](/learning-modules/intro-ds-module/04_01_data_management_motivation.md)
 
 ---
@@ -23,7 +23,7 @@
   - [Responsibility](#responsibility)
 - [Why this matters in food-systems research](#why-this-matters-in-food-systems-research)
 - [What data management cannot guarantee](#what-data-management-cannot-guarantee)
-- [How this connects to the maize-yield project](#how-this-connects-to-the-maize-yield-project)
+- [Across study designs and in the worked example](#across-study-designs-and-in-the-worked-example)
 - [Check your understanding](#check-your-understanding)
 - [Further resources](#further-resources)
 - [Continue to Concepts](#continue-to-concepts)
@@ -53,7 +53,7 @@ Why manage data?  →    How do we understand, →  How do we document and
                        a dataset?
 ```
 
-This page provides the **Motivation**. It establishes the problem and the purpose of data management. The [Concepts page](04_02_data_management_concepts.md) develops the vocabulary and mental models. The [Application page](04_04_data_management_application.md) uses them to inspect, understand, document, organize, validate, and report on the supplied maize dataset.
+This page provides the **Motivation**. It establishes the problem and the purpose of data management. The [Concepts page](04_02_data_management_concepts.md) develops the vocabulary and mental models. The [Application page](04_04_data_management_application.md) demonstrates them with a supplied secondary dataset and explains how to transfer the workflow to other study designs.
 
 The goal is to explain why each project artifact is needed and which risk it addresses, not merely to complete a sequence of commands.
 
@@ -61,7 +61,7 @@ The goal is to explain why each project artifact is needed and which risk it add
 
 ## Reproducible does not automatically mean correct
 
-Imagine that the maize-yield workflow is completely reproducible:
+Imagine that a laboratory, field, or secondary-data workflow is completely reproducible:
 
 - Git records every change to the scripts;
 - `renv` restores the required R packages;
@@ -70,12 +70,12 @@ Imagine that the maize-yield workflow is completely reproducible:
 
 The result can still be wrong or misleading if:
 
-- a yield value is interpreted using the wrong unit;
-- a blank or provider-specific missing code is read as zero;
-- production and harvested-area records are confused;
-- a country label refers to a different geographic unit than expected;
+- a measurement is interpreted using the wrong unit;
+- a blank, instrument code, or provider-specific missing code is read as zero;
+- biological samples and technical replicates are confused;
+- treatment, plot, visit, site, or entity identifiers are misaligned;
 - an estimated value is treated as a direct observation; or
-- the provider revises historical data after the first download.
+- a protocol, instrument calibration, or external source changes unnoticed.
 
 Reproducibility answers, "Can the workflow be repeated?" Data management also asks, "What evidence entered the workflow, what does it mean, and is it suitable for this use?"
 
@@ -203,16 +203,28 @@ Documentation makes limitations visible. It does not remove them.
 
 ---
 
-## How this connects to the maize-yield project
+## Across study designs and in the worked example
+
+The source of data changes what must be documented, but not the need for data
+management. Laboratory projects emphasize sample lineage, assays, batches, and
+calibration. Field experiments emphasize randomization, treatments, blocks,
+plots, and protocol deviations. Field observational studies emphasize sampling,
+repeated visits, measurement context, consent, and selection. Secondary-data
+projects emphasize provider definitions, versions, access, revisions, and
+licenses.
+
+The module then demonstrates these shared principles with the maize-yield
+project.
 
 The Data Management session produces a documented package around a supplied FAOSTAT extract:
 
 ```text
 maize-yield-project/
-├── data-raw/
-│   └── faostat-maize.csv
+├── data/
+│   └── input/
+│       └── faostat-maize-yield-sample.csv
 ├── metadata/
-│   ├── data-dictionary.csv
+│   ├── faostat-maize-yield-data-dictionary.csv
 │   └── provenance.yml
 ├── scripts/
 │   └── validate-data.R

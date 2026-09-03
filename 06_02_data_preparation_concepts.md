@@ -2,7 +2,7 @@
 
 ---
 
-- Last Update: 2026-08-21
+- Last Update: 2026-09-03
 - Source: [06_02_data_preparation_concepts.md](/learning-modules/intro-ds-module/06_02_data_preparation_concepts.md)
 
 ---
@@ -59,8 +59,14 @@ Motivation  →  Concepts  →  Application
 
 [Why prepare data?](06_01_data_preparation_motivation.md) explains why managed and integrated
 evidence may not yet have the representation required for analysis. This page
-provides the vocabulary and decision model used in [the maize preparation
-application](06_03_data_preparation_application.md).
+provides a general vocabulary and decision model demonstrated in the
+[maize-yield worked example](06_03_data_preparation_application.md).
+
+For laboratory and field data, the analysis contract must preserve design
+information such as biological versus technical replication, randomization,
+blocks, sites, repeated units, collection occasions, and protocol deviations.
+Those variables are not administrative clutter: they determine valid
+summaries, models, and uncertainty.
 
 Use these concepts as questions: What should one output row represent? Which
 transformations change values or meaning, and what could be lost? Can every

@@ -1,8 +1,8 @@
-# 6.3) Prepare the maize country-year data
+# 6.3) Apply data preparation: maize-yield worked example
 
 ---
 
-- Last Update: 2026-08-21
+- Last Update: 2026-09-03
 - Source: [06_03_data_preparation_application.md](/learning-modules/intro-ds-module/06_03_data_preparation_application.md)
 
 ---
@@ -13,6 +13,7 @@
 - [Learning objectives](#learning-objectives)
 - [Place in the session](#place-in-the-session)
 - [Scenario and deliverables](#scenario-and-deliverables)
+  - [Transfer the workflow to another study design](#transfer-the-workflow-to-another-study-design)
 - [Before you begin](#before-you-begin)
 - [1. State the preparation contract](#1-state-the-preparation-contract)
 - [2. Inspect the managed input](#2-inspect-the-managed-input)
@@ -69,6 +70,11 @@ to obtain the expected output filename.
 
 ## Scenario and deliverables
 
+> **Worked-example scope:** This exercise prepares repeated country-year
+> secondary data. The same preparation contract applies to samples, plots,
+> farms, visits, and other observational units, but their design variables and
+> valid transformations differ.
+
 The managed FAOSTAT teaching input stores three maize elements in long form
 (Yield in <code>kg/ha</code>, Production in <code>t</code>, Area harvested in
 <code>ha</code>). The project needs one row per country and year with
@@ -82,6 +88,20 @@ data/derived/maize-yield-panel.csv
 data/derived/maize-yield-with-precipitation.csv
 results/tables/data-integration-audit.csv
 ~~~
+
+### Transfer the workflow to another study design
+
+| Project context | Target observation example | Design information that must survive preparation |
+| --- | --- | --- |
+| Laboratory | One sample-assay or summarized sample | Sample and aliquot IDs, batch, method, replicate type, quality-control status |
+| Field experiment | One plot-treatment-occasion | Treatment assignment, block, replicate, site, protocol deviations, measurement occasion |
+| Field observation | One unit-visit or unit-period | Sampling stratum, site, observer or instrument, repeat status, inclusion mechanism |
+| Secondary data | One entity-period or reported event | Provider identifiers, reporting period, flags, revision status, aggregation level |
+
+State the target grain before filtering or reshaping. Do not average technical
+replicates, collapse repeated field observations, impute missing values, or
+remove unusual records unless the analysis contract justifies the operation
+and its loss of information is audited.
 
 The maize panel is an intermediate derived artifact; the integrated table is
 the current input to exploration and modeling.

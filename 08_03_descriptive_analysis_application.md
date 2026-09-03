@@ -1,8 +1,8 @@
-# 8.3) Describe maize yield and precipitation
+# 8.3) Apply descriptive analysis: maize-yield worked example
 
 ---
 
-- Last Update: 2026-08-25
+- Last Update: 2026-09-03
 - Source: [08_03_descriptive_analysis_application.md](/learning-modules/intro-ds-module/08_03_descriptive_analysis_application.md)
 - Estimated completion time: 6–8 hours
 - Independent extension: 2–3 hours
@@ -17,6 +17,7 @@
 - [Learning objectives](#learning-objectives)
 - [Place in the session](#place-in-the-session)
 - [Scenario and deliverables](#scenario-and-deliverables)
+  - [Transfer the workflow to another study design](#transfer-the-workflow-to-another-study-design)
 - [Before you begin](#before-you-begin)
 - [1. Define descriptive contracts](#1-define-descriptive-contracts)
 - [2. Inspect coverage and denominators](#2-inspect-coverage-and-denominators)
@@ -74,6 +75,11 @@ does not alter the input datasets or fit an explanatory or predictive model.
 
 ## Scenario and deliverables
 
+> **Worked-example scope:** This page calculates summaries for a country-year
+> panel. The descriptive contract transfers to other data when its population,
+> observation grain, grouping, dependence, weighting, and missingness rules are
+> redefined for the study at hand.
+
 The project team must answer:
 
 > How do maize yield and growing-season precipitation vary across countries
@@ -92,6 +98,19 @@ results/tables/yield-precipitation-association.csv
 results/tables/stationarity-diagnostic.csv
 results/descriptive-modeling-handoff.md
 ~~~
+
+### Transfer the workflow to another study design
+
+| Project context | Describe separately where relevant | Dependence or stability concern |
+| --- | --- | --- |
+| Laboratory | Samples, controls, batches, instruments, replicate types | Batch drift, calibration change, correlated replicates |
+| Field experiment | Treatments, blocks, sites, occasions | Randomization groups, block effects, repeated measures, treatment-specific variance |
+| Field observation | Sampling strata, sites, units, visits | Selection, clustering, repeated units, seasonal or observer change |
+| Secondary data | Entities, periods, source flags, revisions | Reporting changes, temporal trends, spatial aggregation, provider revisions |
+
+Do not replace “country” mechanically with another label. Choose summaries
+that respect the sampling or assignment design, and distinguish independent
+units from technical replicates or repeated measurements.
 
 The tables provide machine-readable evidence. The Markdown handoff explains
 what that evidence means, what it does not establish, and how it affects later

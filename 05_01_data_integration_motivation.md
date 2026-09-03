@@ -2,7 +2,7 @@
 
 ---
 
-- Last Update: 2026-08-20
+- Last Update: 2026-09-03
 - Source: [05_01_data_integration_motivation.md](/learning-modules/intro-ds-module/05_01_data_integration_motivation.md)
 
 ---
@@ -30,7 +30,7 @@
   - [Unmatched records disappear](#unmatched-records-disappear)
   - [Aggregation changes meaning](#aggregation-changes-meaning)
   - [Credentials leak](#credentials-leak)
-- [How this connects to the maize-yield project](#how-this-connects-to-the-maize-yield-project)
+- [Across study designs and in the worked example](#across-study-designs-and-in-the-worked-example)
 - [Check your understanding](#check-your-understanding)
 - [Further resources](#further-resources)
 - [Continue to Concepts](#continue-to-concepts)
@@ -59,14 +59,14 @@ Motivation  →  Concepts  →  Application
  this page
 ```
 
-The preceding Data Management session established what the maize data mean,
-where they came from, and how their structure is validated. This session asks
-how to extend that managed dataset with another source without hiding
+The preceding Data Management session established how each project source
+should be understood, documented, and validated. This session asks how to
+connect managed measurements or datasets without hiding
 incompatible identifiers, grains, periods, units, or definitions.
 
 [Understand data-integration concepts](05_02_data_integration_concepts.md) develops the mental
-model. [Integrate maize-yield and precipitation data](05_03_data_integration_application.md)
-applies it to FAOSTAT and CHIRPS.
+model. The [application](05_03_data_integration_application.md) demonstrates it
+with FAOSTAT and CHIRPS and provides transfer questions for other studies.
 
 ---
 
@@ -215,7 +215,15 @@ API tokens or passwords embedded in scripts can enter Git history. Store secrets
 
 ---
 
-## How this connects to the maize-yield project
+## Across study designs and in the worked example
+
+Integration may connect an assay table to a sample register, field outcomes to
+a randomization file, repeated observations to soil or sensor measurements, or
+one external provider dataset to another. In every case, the scientific unit,
+identifier, time, space, measurement definition, and relationship between rows
+must be explicit before joining.
+
+The maize-yield project supplies one worked example:
 
 The exercise begins with the managed FAOSTAT teaching data and combines:
 

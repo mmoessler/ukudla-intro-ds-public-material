@@ -2,7 +2,7 @@
 
 ---
 
-- Last Update: 2026-08-21
+- Last Update: 2026-09-03
 - Source: [07_02_data_visualization_concepts.md](/learning-modules/intro-ds-module/07_02_data_visualization_concepts.md)
 - Estimated reading time: 60 minutes
 - Estimated activity time: 30 minutes
@@ -67,8 +67,8 @@ Motivation  →  Concepts  →  Application
 ~~~
 
 [Why visualize data?](07_01_data_visualization_motivation.md) explains why visual choices
-matter. This page provides the decision model used in [the maize visualization
-application](07_03_data_visualization_application.md).
+matter. This page provides a general decision model, followed by a
+[maize-yield worked example](07_03_data_visualization_application.md).
 
 Use one central question throughout:
 
@@ -153,10 +153,10 @@ In `ggplot2`, a property inside `aes()` is mapped to a variable. A property
 outside `aes()` is fixed:
 
 ~~~r
-# Map country to colour
+# Map a scientifically relevant group to colour
 geom_line(aes(colour = country))
 
-# Use one fixed colour for every line
+# Use one fixed colour when grouping is not encoded
 geom_line(colour = "#29508A")
 ~~~
 

@@ -1,8 +1,8 @@
-# 5.3) Integrate maize-yield and precipitation data
+# 5.3) Apply data integration: maize-yield worked example
 
 ---
 
-- Last Update: 2026-08-20
+- Last Update: 2026-09-03
 - Source: [05_03_data_integration_application.md](/learning-modules/intro-ds-module/05_03_data_integration_application.md)
 
 ---
@@ -13,6 +13,7 @@
 - [Learning objectives](#learning-objectives)
 - [Place in the session](#place-in-the-session)
 - [Scenario and deliverable](#scenario-and-deliverable)
+  - [Transfer the workflow to another study design](#transfer-the-workflow-to-another-study-design)
 - [1. Identify the information gap](#1-identify-the-information-gap)
   - [Why CHIRPS is a reasonable choice](#why-chirps-is-a-reasonable-choice)
 - [2. Understand and validate each source](#2-understand-and-validate-each-source)
@@ -73,6 +74,12 @@ concepts](05_02_data_integration_concepts.md) before beginning.
 
 ## Scenario and deliverable
 
+> **Worked-example scope:** FAOSTAT and CHIRPS demonstrate integration across
+> tabular, spatial, and temporal representations. Other projects may integrate
+> two primary sources, primary and secondary data, or repeated outputs from one
+> study. The integration contract—not the source names—is the transferable
+> method.
+
 FAOSTAT describes annual maize yield, production, and harvested area, but it
 does not describe environmental conditions associated with each country-year.
 The project adds CHIRPS precipitation as a plausible environmental variable.
@@ -83,6 +90,20 @@ The tracked inputs are:
 data/input/faostat-maize-yield-sample.csv
 data/input/chirps-growing-season-precipitation.csv
 ~~~
+
+### Transfer the workflow to another study design
+
+| Project context | Possible integration | Central alignment questions |
+| --- | --- | --- |
+| Laboratory | Assay results + sample register | Do sample, aliquot, batch, method, and collection-time identifiers agree? |
+| Field experiment | Outcome measurements + treatment/randomization file | Does each measured unit map to its assigned treatment, block, and occasion without multiplication? |
+| Field observation | Field records + soil, weather, survey, or sensor data | Do site, unit, time, spatial support, and sampling coverage refer to comparable observations? |
+| Secondary data | Provider dataset + administrative, climate, or spatial source | Are entities, periods, definitions, classifications, units, and revisions compatible? |
+
+For your own project, replace the country-year key and spatial aggregation
+rules with the target observation defined by its study design. Always audit
+unmatched keys, duplicated relationships, changed row counts, introduced
+missingness, and the lineage of every retained variable.
 
 The workflow produces:
 
@@ -158,7 +179,7 @@ reshapes the values, converts yield from <code>kg/ha</code> to
 Before trusting the input, inspect it directly:
 
 ~~~r
-maize_raw <- readr::read_csv("data-raw/faostat-maize-yield-sample.csv")
+maize_raw <- readr::read_csv("data/input/faostat-maize-yield-sample.csv")
 dplyr::count(maize_raw, area, element, unit)
 ~~~
 
@@ -189,7 +210,7 @@ limitations of all inputs.
 A parallel check confirms the expected season coverage:
 
 ~~~r
-chirps_raw <- readr::read_csv("data-raw/chirps-growing-season-precipitation.csv")
+chirps_raw <- readr::read_csv("data/input/chirps-growing-season-precipitation.csv")
 dplyr::count(chirps_raw, project_country_id) |> dplyr::filter(n != 33)
 ~~~
 

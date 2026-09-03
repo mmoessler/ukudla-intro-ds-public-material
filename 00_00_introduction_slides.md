@@ -2,8 +2,9 @@
 
 ---
 
-- Last Update: 2026-08-03
-- Source: [00_00_introduction_slides.md](/learning-modules/intro-ds-module/00_00_introduction_slides.md)
+- Source: [00_00_introduction_slides.md](https://github.com/mmoessler/ukudla-intro-ds-public-material/blob/main/00_00_introduction_slides.md)
+- History: [Commit History](https://github.com/mmoessler/ukudla-intro-ds-public-material/commits/main/00_00_introduction_slides.md)
+- Feedback: [Topic 00: Introduction](https://github.com/mmoessler/ukudla-intro-ds-public-material/discussions/1)
 
 ---
 

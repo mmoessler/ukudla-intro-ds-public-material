@@ -2,7 +2,7 @@
 
 ---
 
-- Last Update: 2026-08-21
+- Last Update: 2026-09-03
 - Source: [06_01_data_preparation_motivation.md](/learning-modules/intro-ds-module/06_01_data_preparation_motivation.md)
 
 ---
@@ -18,7 +18,7 @@
 - [Preparation should create new artifacts](#preparation-should-create-new-artifacts)
 - [Common preparation decisions](#common-preparation-decisions)
 - [What can go wrong](#what-can-go-wrong)
-- [How this connects to the maize-yield project](#how-this-connects-to-the-maize-yield-project)
+- [Across study designs and in the worked example](#across-study-designs-and-in-the-worked-example)
 - [Check your understanding](#check-your-understanding)
 - [Further resources](#further-resources)
 - [Continue to Concepts](#continue-to-concepts)
@@ -48,14 +48,13 @@ Motivation  →  Concepts  →  Application
  this page
 ~~~
 
-The preceding sessions made the source artifacts understandable, auditable, and
-connected the FAOSTAT maize statistics with CHIRPS growing-season
-precipitation. This session asks how that managed, integrated data should be
-represented for a defined analysis.
+The preceding sessions made source artifacts understandable and auditable and
+showed how compatible observations can be integrated. This session asks how
+managed evidence should be represented for a defined analysis.
 
 [Understand data-preparation concepts](06_02_data_preparation_concepts.md) explains the relevant
-distinctions and transformation patterns. [Prepare the maize country-year
-data](06_03_data_preparation_application.md) applies them in the example project.
+distinctions and transformation patterns. The [application](06_03_data_preparation_application.md)
+demonstrates them with the maize project and maps them to other study designs.
 
 ---
 
@@ -186,7 +185,15 @@ own grain, key, variable definitions, limitations, and provenance.
 
 ---
 
-## How this connects to the maize-yield project
+## Across study designs and in the worked example
+
+Preparation may organize laboratory replicates and detection-limit flags,
+preserve treatment and block variables in an experiment, align repeated visits
+in an observational study, or reshape provider records. The intended analysis
+determines whether a row represents a sample, experimental unit, unit-occasion,
+event, or entity-period and which design information must remain available.
+
+The maize-yield project demonstrates one repeated entity-period workflow.
 
 The example project performs source-specific preparation in
 <code>scripts/prepare-maize-data.R</code>: it validates the fixed FAOSTAT

@@ -1,8 +1,8 @@
-# 9.3) Conduct a causal analysis of maize yield
+# 9.3) Apply explanatory analysis: maize-yield worked example
 
 ---
 
-- Last Update: 2026-08-25
+- Last Update: 2026-09-03
 - Source: [09_03_explanatory_analysis_application.md](/learning-modules/intro-ds-module/09_03_explanatory_analysis_application.md)
 - Estimated completion time: 6–8 hours
 - Independent extension: 2–3 hours
@@ -17,6 +17,7 @@
 - [Learning objectives](#learning-objectives)
 - [Place in the session](#place-in-the-session)
 - [Scenario and deliverables](#scenario-and-deliverables)
+  - [Transfer the workflow to another study design](#transfer-the-workflow-to-another-study-design)
 - [Before you begin](#before-you-begin)
 - [1. Define the causal question and estimand](#1-define-the-causal-question-and-estimand)
 - [2. Draw the causal diagram](#2-draw-the-causal-diagram)
@@ -70,6 +71,12 @@ explanation as the same task.
 
 ## Scenario and deliverables
 
+> **Worked-example scope:** The precipitation question is intentionally used to
+> expose the limits of causal inference from aggregated observational data. It
+> is not the default causal design. A randomized field or laboratory experiment
+> may support stronger identification, while an observational field study
+> requires its own defensible comparison and adjustment strategy.
+
 The project team asks:
 
 > What is the causal effect of growing-season precipitation on national maize
@@ -90,6 +97,20 @@ results/tables/explanatory-residual-dependence.csv
 results/explanatory-modeling-conclusion.md
 reports/explanatory-modeling.qmd
 ~~~
+
+### Transfer the workflow to another study design
+
+| Project context | Source of the causal contrast | Main identification questions |
+| --- | --- | --- |
+| Laboratory experiment | Randomized manipulation of samples or experimental units | Was assignment implemented, were outcomes measured comparably, and are spillover and attrition negligible? |
+| Field experiment | Randomized treatment within blocks, sites, or clusters | Does analysis honor assignment, blocking, clustering, noncompliance, interference, and missing outcomes? |
+| Field observation | Naturally varying exposure or practice | Which pre-exposure causes affect both exposure and outcome, how are they measured, and is overlap adequate? |
+| Secondary data | Policy, environmental, or reported exposure | Is the intervention well defined at the recorded grain, and do aggregation, selection, timing, and unmeasured confounding prevent identification? |
+
+For every design, define the intervention, comparator, target population,
+outcome, and time horizon before selecting an estimator. Randomization can
+support exchangeability; it does not by itself fix measurement error,
+noncompliance, attrition, interference, or an ambiguous treatment definition.
 
 The causal-model document records the question, estimand, diagram, variable
 roles, and identification judgment. The conclusion must distinguish what the

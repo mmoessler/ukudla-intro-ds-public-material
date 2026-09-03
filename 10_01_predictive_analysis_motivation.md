@@ -2,7 +2,7 @@
 
 ---
 
-- Last Update: 2026-08-25
+- Last Update: 2026-09-03
 - Source: [10_01_predictive_analysis_motivation.md](/learning-modules/intro-ds-module/10_01_predictive_analysis_motivation.md)
 - Estimated reading time: 20 minutes
 - Estimated activity time: 10 minutes
@@ -17,10 +17,10 @@
 - [Prediction concerns observations not used for fitting](#prediction-concerns-observations-not-used-for-fitting)
 - [Explanation and prediction are different objectives](#explanation-and-prediction-are-different-objectives)
 - [Intended use determines meaningful evaluation](#intended-use-determines-meaningful-evaluation)
-- [Time makes maize-yield prediction difficult](#time-makes-maize-yield-prediction-difficult)
+- [Dependence and transfer make prediction difficult](#dependence-and-transfer-make-prediction-difficult)
 - [Simple baselines are scientifically useful](#simple-baselines-are-scientifically-useful)
 - [What can go wrong](#what-can-go-wrong)
-- [How this connects to the maize-yield project](#how-this-connects-to-the-maize-yield-project)
+- [Worked example: the maize-yield project](#worked-example-the-maize-yield-project)
 - [Initial activity](#initial-activity)
 - [Check your understanding](#check-your-understanding)
 - [Further resources](#further-resources)
@@ -57,8 +57,8 @@ to construct it?
 
 [Understand predictive-modeling concepts](10_02_predictive_analysis_concepts.md)
 defines a prediction contract, data splits, leakage, baselines, and evaluation
-metrics. [Evaluate maize-yield predictions](10_03_predictive_analysis_application.md)
-applies those concepts to the example project.
+metrics across study designs. The [application](10_03_predictive_analysis_application.md)
+demonstrates those concepts with the maize project.
 
 ---
 
@@ -119,7 +119,19 @@ reliable than it is.
 
 ---
 
-## Time makes maize-yield prediction difficult
+## Dependence and transfer make prediction difficult
+
+The intended deployment boundary differs across projects. Laboratory models
+may need to transfer to new biological samples, instruments, or batches. Field
+models may need to transfer to new plots, sites, seasons, or farms. Secondary
+data may require prediction for later periods or previously unseen entities.
+
+Related rows cannot be treated automatically as independent: aliquots can
+share a biological sample, plots can share a block or site, and repeated visits
+can share a unit. An evaluation split must keep these relationships from
+leaking information across development and test data.
+
+The maize-yield example emphasizes temporal transfer:
 
 The maize panel combines repeated annual observations for a small set of
 countries, where neighboring years are related and technology, management,
@@ -173,7 +185,7 @@ algorithm automatically solves.
 
 ---
 
-## How this connects to the maize-yield project
+## Worked example: the maize-yield project
 
 The example project defines a transparent teaching benchmark:
 

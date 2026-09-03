@@ -2,7 +2,7 @@
 
 ---
 
-- Last Update: 2026-08-21
+- Last Update: 2026-09-03
 - Source: [07_01_data_visualization_motivation.md](/learning-modules/intro-ds-module/07_01_data_visualization_motivation.md)
 - Estimated reading time: 20 minutes
 - Estimated activity time: 10 minutes
@@ -25,7 +25,7 @@
   - [Colour carries meaning that some readers cannot access](#colour-carries-meaning-that-some-readers-cannot-access)
   - [Overplotting creates false absence](#overplotting-creates-false-absence)
   - [A visual association is described as causal](#a-visual-association-is-described-as-causal)
-- [How this connects to the maize-yield project](#how-this-connects-to-the-maize-yield-project)
+- [Across study designs and in the worked example](#across-study-designs-and-in-the-worked-example)
 - [Initial activity](#initial-activity)
 - [Check your understanding](#check-your-understanding)
 - [Further resources](#further-resources)
@@ -56,15 +56,13 @@ Motivation  →  Concepts  →  Application
  this page
 ~~~
 
-Data Preparation created documented country-year representations of maize
-yield and growing-season precipitation. This session asks how to map those
-observations to visual properties so that patterns can be inspected and
-communicated without hiding the data's meaning or limitations.
+Data Preparation created documented analytical observations. This session asks
+how to map observations to visual properties so patterns can be inspected and
+communicated without hiding their meaning, study design, or limitations.
 
 [Understand data-visualization concepts](07_02_data_visualization_concepts.md) develops
-the question-to-graphic workflow. [Visualize maize yield and
-precipitation](07_03_data_visualization_application.md) applies it in the example
-project.
+the question-to-graphic workflow. The [application](07_03_data_visualization_application.md)
+demonstrates it in the maize project and provides transfer guidance.
 
 ---
 
@@ -199,7 +197,15 @@ establishes neither causal direction nor a controlled comparison.
 
 ---
 
-## How this connects to the maize-yield project
+## Across study designs and in the worked example
+
+Relevant comparisons might be between laboratory controls and samples,
+treatments and blocks in an experiment, sites or visits in an observational
+study, or entities and periods in secondary data. The visual grammar is shared;
+the grouping, replication, uncertainty, and dependence that must remain visible
+come from the study design.
+
+The maize-yield project provides one longitudinal secondary-data example.
 
 The example project provides two useful analytical artifacts:
 

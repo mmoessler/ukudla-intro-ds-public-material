@@ -2,7 +2,7 @@
 
 ---
 
-- Last Update: 2026-08-29
+- Last Update: 2026-09-03
 - Source: [04_02_data_management_concepts.md](/learning-modules/intro-ds-module/04_02_data_management_concepts.md)
 
 ---
@@ -62,7 +62,7 @@ Motivation  →  Concepts  →  Application
              this page
 ```
 
-The [Motivation page](04_01_data_management_motivation.md) explains why reproducible computation is not sufficient when data are misunderstood. This page provides the vocabulary and decisions needed to complete [the maize data-management application](04_04_data_management_application.md).
+The [Motivation page](04_01_data_management_motivation.md) explains why reproducible computation is not sufficient when data are misunderstood. This page provides reusable vocabulary and decisions demonstrated in the [maize-yield worked example](04_04_data_management_application.md).
 
 Use the concepts as questions to ask of a dataset, not only as definitions to memorize:
 
@@ -82,19 +82,22 @@ For a rectangular dataset:
 - a **variable** records one property across observations;
 - a **value** is the recorded content for one variable in one observation.
 
-These definitions depend on the intended structure. In a country–year panel, an observation may be a country in a year. In a more detailed FAOSTAT table, the observation may be an area–year–item–element combination.
+These definitions depend on the intended structure. An observation might be a
+sample-assay, a plot-treatment-occasion, a farm visit, or an entity-period
+record. Technical replicates and repeated measurements are not automatically
+independent observations; their role follows from the study design.
 
 Variables can play different roles:
 
 | Role | Example | Purpose |
 | --- | --- | --- |
-| Identifier | Area Code | Identifies an entity |
-| Label | Area | Displays a readable name |
-| Time | Year | Locates an observation in time |
-| Classification | Item Code, Element Code | Identifies a defined category |
-| Measure | Value | Records a quantity |
-| Unit | Unit | Defines the measurement scale |
-| Quality information | Flag | Qualifies how a value was obtained |
+| Identifier | Sample, plot, farm, or entity ID | Identifies a unit |
+| Label | Site or treatment label | Displays a readable name |
+| Time | Collection date, visit, season, or year | Locates an observation in time |
+| Classification | Assay, treatment, variable, or item code | Identifies a defined category |
+| Measure | Observed value | Records a quantity |
+| Unit | Measurement unit | Defines the measurement scale |
+| Quality information | Laboratory, field, or provider flag | Qualifies how a value was obtained |
 
 Do not assume that a numeric column is a measure. Codes may be stored as numbers but should not be added or averaged.
 
@@ -131,10 +134,12 @@ Identifiers are usually safer for matching because labels can differ in spelling
 
 A **candidate key** is a set of variables expected to identify each row uniquely. A **composite key** uses more than one variable.
 
-For a FAOSTAT extract, a candidate key could include:
+Candidate keys reflect the study grain. Examples include:
 
 ```text
-Area Code + Year + Item Code + Element Code + Unit
+sample_id + assay + replicate
+plot_id + treatment + measurement_date
+entity_id + period + variable_code + unit
 ```
 
 The exact key must be inferred from documentation and tested against the data. Finding duplicates does not automatically mean that one row should be deleted. The proposed key may be incomplete, or the source may intentionally publish multiple statuses, methods, or revisions.
@@ -145,19 +150,23 @@ The exact key must be inferred from documentation and tested against the data. F
 
 ### Cross-sectional data
 
-Many units observed for one period, such as maize yield for several countries in 2022.
+Many units observed in one context, such as laboratory samples in one batch or
+field plots at harvest.
 
 ### Time-series data
 
-One unit observed through time, such as annual maize yield for Zambia from 1990 to 2022.
+One unit observed through ordered occasions, such as repeated sensor readings
+at one site.
 
 ### Panel data
 
-Many units observed through time, such as annual maize yield for several countries.
+Many units observed repeatedly, such as plots across visits or regions across years.
 
 ### Hierarchical data
 
-Units are nested, such as farms within districts and districts within countries. Records within the same group may not be independent.
+Units are nested, such as aliquots within samples and batches, plots within
+blocks and sites, or farms within districts. Records within the same group may
+not be independent.
 
 ### Spatial vector data
 
@@ -217,7 +226,7 @@ Provenance records where data came from and what happened to them.
 A small project can use YAML:
 
 ```yaml
-artifact: data-raw/faostat-maize.csv
+artifact: data/input/faostat-maize-yield-sample.csv
 provider: Food and Agriculture Organization of the United Nations
 dataset: FAOSTAT crop and livestock products
 release: "record the release if supplied"
@@ -269,9 +278,10 @@ A useful starting structure is:
 
 ```text
 maize-yield-project/
-├── data-raw/          # unchanged source responses
-├── data-interim/      # outputs between source and analysis-ready data
-├── data-processed/    # analysis-ready outputs created by code
+├── data/
+│   ├── source/        # complete acquired source artifacts
+│   ├── input/         # fixed, managed teaching or analysis inputs
+│   └── derived/       # outputs created reproducibly from inputs
 ├── metadata/          # dictionaries, code lists, licenses, provenance
 ├── scripts/           # acquisition, validation, integration, preparation
 └── reports/           # validation, analysis, and communication

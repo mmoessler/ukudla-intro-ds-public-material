@@ -2,7 +2,7 @@
 
 ---
 
-- Last Update: 2026-08-01
+- Last Update: 2026-09-03
 - Source: [00_01_introduction_example_project.md](/learning-modules/intro-ds-module/00_01_introduction_example_project.md)
 
 ---
@@ -12,51 +12,57 @@
 - [Outline](#outline)
 - [Overall philosophy](#overall-philosophy)
 - [Learning objectives](#learning-objectives)
-- [Module structure](#module-structure)
-  - [Week 0 – Welcome](#week-0--welcome)
-  - [Week 1 – Data Science Project Environment](#week-1--data-science-project-environment)
-  - [Week 2 – Data Management](#week-2--data-management)
-  - [Week 3 – Data Preparation \& Visualization](#week-3--data-preparation--visualization)
-  - [Week 4 – Data Analysis](#week-4--data-analysis)
-  - [Week 5 – Summary](#week-5--summary)
+- [Self-paced study](#self-paced-study)
+- [Topic structure](#topic-structure)
+  - [Part 0 – Introduction](#part-0--introduction)
+  - [Part 1 – Tools and reproducibility](#part-1--tools-and-reproducibility)
+  - [Part 2 – Data foundations](#part-2--data-foundations)
+  - [Part 3 – Data analysis](#part-3--data-analysis)
+- [Structure within a topic](#structure-within-a-topic)
 - [Running project repository](#running-project-repository)
 - [Data sources](#data-sources)
+- [Completing the module](#completing-the-module)
 
 ---
 
 ## Overall philosophy
 
-The module is built around **one continuous, reproducible data science project** rather than a collection of disconnected examples.
+The module teaches reusable data-science practices and connects them through
+**one continuous, reproducible example project**. The concepts are not limited
+to that example: learners should be able to transfer them to laboratory data,
+field experiments, field observations, surveys, administrative records, and
+other secondary data.
 
 **Running case study**:
 
 ❗**Understanding changes in maize yield in Southern Africa**
 
-This allows every topic to be introduced within the same workflow:
+The running project makes dependencies between topics visible:
 
 ```text
 Research Question
         ↓
-Data Acquisition
+Study Design and Data Collection
         ↓
 Data Management
         ↓
 Data Preparation
         ↓
-Exploratory Data Analysis
-        ↓
 Visualization
         ↓
-Modeling
+Descriptive Analysis
         ↓
-Evaluation
+Explanatory or Predictive Analysis
         ↓
 Interpretation
         ↓
-Communication & Reproducibility
+Communication and Reproducibility
 ```
 
-The project should use real **FAOSTAT** data and, optionally, selected World Bank indicators.
+The project is an application and integration point, not the definition of the
+course. A laboratory or field project may collect primary data rather than
+download provider data, but it still needs version control, documentation,
+validation, preparation, analysis, and reproducible communication.
 
 ---
 
@@ -65,181 +71,112 @@ The project should use real **FAOSTAT** data and, optionally, selected World Ban
 After completing the module, participants should be able to
 
 - organize a reproducible data science project;
-- understand common food-system datasets;
-- manage and document data;
-- clean and prepare data for analysis;
+- recognize how study design and data origin affect an analysis;
+- manage, document, integrate, and prepare data;
 - create informative visualizations;
-- fit and interpret simple statistical models;
+- describe distributions, relationships, and stability;
 - distinguish explanation from prediction;
+- fit, evaluate, and interpret simple statistical models; and
 - communicate results in a reproducible report.
 
 ---
 
-## Module structure
+## Self-paced study
 
-### Week 0 – Welcome
+The module is asynchronous, self-paced, and location-independent. Topic
+numbers express a recommended dependency order, not calendar weeks or fixed
+meeting dates. Learners may distribute the work according to their prior
+experience and available time.
 
-- Introduction
-- Expectations
-- Course organization
-- Overview of the complete workflow
+Plan approximately **15 hours per topic** for the slides, detailed pages,
+guided project work, independent practice, troubleshooting, reflection, and
+documentation. This is a workload estimate rather than a deadline. Setup-heavy
+topics may require more time initially, while experienced learners may move
+more quickly through familiar material.
 
----
-
-### Week 1 – Data Science Project Environment
-
-**Topics**
-
-- Project organization
-- RStudio Project
-- Git
-- GitHub / GitLab
-- Reproducible environments
-- renv
-- Containers (overview)
-- Local vs remote computing
-- SSH (conceptual)
-
-**Deliverable**
-
-- Students can run the supplied project and reproduce all analyses.
-
-**Suggested resources**
-
-- The Turing Way (Reproducibility)
+Follow the topics in order on a first pass because later work builds on earlier
+artifacts and concepts. Returning to an earlier topic to revise a decision is
+expected: a data-science workflow is iterative rather than strictly linear.
 
 ---
 
-### Week 2 – Data Management
+## Topic structure
 
-**Topics**
+### Part 0 – Introduction
 
-- What is data?
-- Structured vs semi-structured data
-- Cross-sectional
-- Time series
-- Panel
-- Spatial data
-- CSV
-- Excel
-- JSON
-- Databases
-- Metadata
-- FAIR principles
-- Data provenance
+**00 Introduction** establishes the course purpose, the distinction between
+descriptive, explanatory, and predictive questions, and the complete reasoning
+chain from a research question to a reproducible claim. It also introduces the
+example project and the available development environments.
 
-**Running example**
+### Part 1 – Tools and reproducibility
 
-- Import FAOSTAT maize production data.
+1. **Version Control and Collaboration using Git and GitHub** — record
+   meaningful project states, inspect changes, collaborate, and recover work.
+2. **Reproducible Environments using `renv` and Docker** — record package and
+   system dependencies and run analyses under controlled conditions.
+3. **Remote Computing using SSH and Linux** — work safely and reproducibly in
+   local containers and remote command-line environments.
 
-**Students inspect**
+At the end of Part 1, learners should be able to obtain a project, restore its
+environment, inspect its history, and run it in an appropriate computing
+context.
 
-- variables
-- units
-- countries
-- years
-- missing values
-- metadata
+### Part 2 – Data foundations
 
-**Deliverable**
+4. **Data Management** — define observation grain, document meaning and
+   provenance, validate fitness for purpose, and manage data responsibly.
+5. **Data Integration** — align identifiers, time, space, units, and meaning
+   when combining measurements or datasets.
+6. **Data Preparation** — transform managed evidence into an analysis-specific
+   dataset while preserving decisions, audits, and lineage.
 
-- A documented data dictionary.
+These practices apply whether data originate in a laboratory, a designed field
+experiment, an observational study, or an external provider.
 
----
+### Part 3 – Data analysis
 
-### Week 3 – Data Preparation & Visualization
+7. **Data Visualization** — map observations to defensible visual encodings for
+   exploration and communication.
+8. **Descriptive Analysis** — quantify distributions, variation, association,
+   and evidence about stability or change.
+9. **Explanatory Analysis** — formulate causal questions, distinguish design
+   from estimation, and state the assumptions supporting an interpretation.
+10. **Predictive Analysis** — define a prediction task, prevent leakage, compare
+    models with baselines, and evaluate performance on realistic unseen data.
 
-**Topics**
-
-Data preparation
-
-- filtering
-- selecting variables
-- joins
-- missing values
-- duplicates
-- reshaping
-- derived variables
-
-Visualization
-
-- distributions
-- time series
-- comparisons
-- scatterplots
-
-**Running example**
-
-Questions
-
-- Which countries have the largest maize yields?
-- How have yields changed over time?
-- Are changes driven by production or harvested area?
-
-**Deliverable**
-
-- A reproducible Quarto/HTML report with visualizations.
+The three analytical purposes complement one another but are not
+interchangeable. A descriptive association is not a causal effect, and a
+causal coefficient is not evidence of predictive performance.
 
 ---
 
-### Week 4 – Data Analysis
+## Structure within a topic
 
-**Topics**
+Each topic follows a common core pathway:
 
-Goals of analysis
+1. **Slides** provide a concise overview and the central narrative.
+2. **Motivation** explains the problem, relevance, and connection to preceding
+   work.
+3. **Concepts** introduces the terminology, distinctions, assumptions, and
+   limitations needed for application.
+4. **Application** turns the concepts into a reproducible workflow and asks the
+   learner to inspect and interpret the resulting evidence.
 
-- explanation
-- prediction
+Some topics include additional **setup**, **tools**, or **reference** pages.
+Setup pages should be completed before the corresponding application.
+Reference pages support later consultation and need not always be read from
+beginning to end during the first pass.
 
-Model workflow
+For each topic, learners should:
 
-- train/test split
-- generalization
-- evaluation
-- interpretation
-
-Models
-
-- linear regression
-- multiple regression
-
-**Running example**
-
-Example descriptive model
-
-```r
-lm(log(yield) ~ year + country)
-```
-
-Prediction exercise
-
-- Training: 1990–2017
-- Testing: 2018+
-
-Students compare
-
-- historical mean
-- linear trend
-- country model
-
-**Deliverable**
-
-- Interpret model coefficients and prediction performance.
-
----
-
-### Week 5 – Summary
-
-Students submit a short reproducible report including
-
-- research question
-- data
-- preparation
-- visualizations
-- model
-- interpretation
-- limitations
-- reproducibility statement
+- state what question or risk the topic addresses;
+- inspect the relevant starting project state;
+- predict what an operation should change;
+- run or adapt the documented workflow;
+- inspect outputs and unexpected results;
+- explain important decisions and limitations; and
+- record a small, reviewable project change.
 
 ---
 
@@ -248,31 +185,62 @@ Students submit a short reproducible report including
 ```text
 maize-yield-project/
 ├── README.md
-├── data-raw/
-├── data-processed/
+├── data/
+│   ├── source/
+│   ├── input/
+│   └── derived/
+├── metadata/
 ├── scripts/
 ├── reports/
 ├── figures/
+├── results/
 ├── renv.lock
+├── Dockerfile
 └── maize-yield-project.Rproj
 ```
+
+The example repository applies the course topics to changes in maize yield in
+Southern Africa. It shows one coherent implementation, while the general
+guidance explains which decisions must be adapted for other research designs
+and data sources.
 
 ---
 
 ## Data sources
 
-**Primary**
+**Maize-yield outcomes**
 
-- FAOSTAT
+- FAOSTAT crop and livestock products data
 
-**Optional**
+**Growing-season precipitation**
 
-- World Bank Open Data
+- CHIRPS v2 data accessed through ClimateSERV
 
-**Possible variables**
+The integrated teaching data include:
 
-- maize production
-- harvested area
-- yield
-- fertilizer use
-- agricultural land
+- maize production, harvested area, and yield;
+- annual growing-season precipitation estimates;
+- country and year identifiers; and
+- source flags, documentation, dictionaries, and provenance records.
+
+Both sources are secondary data. Other learners may apply the same module
+structure to primary measurements collected under laboratory, experimental,
+or observational protocols.
+
+---
+
+## Completing the module
+
+Completion should be demonstrated through a reproducible project and a concise
+report that connect:
+
+- the research purpose and analytical objective;
+- study design, data origin, population, and observation grain;
+- data-management, integration, and preparation decisions;
+- visual and numerical descriptions;
+- an explanatory or predictive analysis appropriate to the question;
+- interpretation, uncertainty, and limitations; and
+- the project state, computational environment, and generated artifacts.
+
+The sequence does not end with a universally "final" dataset or model. It ends
+with a claim whose data, assumptions, code, and limitations can be inspected.

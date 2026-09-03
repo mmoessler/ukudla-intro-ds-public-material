@@ -14,7 +14,7 @@
 - [1. Install Git](#1-install-git)
   - [Windows](#windows)
   - [macOS](#macos)
-  - [Ubuntu or Debian Linux](#ubuntu-or-debian-linux)
+  - [Linux](#linux)
 - [2. Create a GitHub account](#2-create-a-github-account)
 - [3. Configure your Git identity](#3-configure-your-git-identity)
 - [4. Check for an existing SSH key](#4-check-for-an-existing-ssh-key)
@@ -83,15 +83,11 @@ If Git is missing, macOS may offer to install the Command Line Tools. Follow the
 
 ---
 
-### Ubuntu or Debian Linux
+### Linux
 
-```bash
-sudo apt update
-sudo apt install git
-git --version
-```
+Most Linux distributions provide git through their package manager.
 
-For another Linux distribution, follow its package manager's instructions or the [official Git installation guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+For more information, please consult the [official Git installation guide](https://git-scm.com/install/linux) or your preferred LLM.
 
 ---
 

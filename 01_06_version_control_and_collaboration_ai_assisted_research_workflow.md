@@ -2,7 +2,7 @@
 
 ---
 
-- Last Update: 2026-08-29
+- Last Update: 2026-09-03
 - Source: [01_06_version_control_and_collaboration_ai_assisted_research_workflow.md](/learning-modules/intro-ds-module/01_06_version_control_and_collaboration_ai_assisted_research_workflow.md)
 
 ---
@@ -202,7 +202,7 @@ Better:
 
 Better implementation request:
 
-> Implement the approved time-based split in `scripts/model-maize-yield.R`.
+> Implement the approved time-based split in `scripts/predict-maize-yield.R`.
 > Preserve the existing output schema, add a test for the split boundary, and
 > update the report. Do not change package versions.
 

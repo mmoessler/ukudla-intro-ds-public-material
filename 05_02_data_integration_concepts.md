@@ -2,7 +2,7 @@
 
 ---
 
-- Last Update: 2026-08-20
+- Last Update: 2026-09-03
 - Source: [05_02_data_integration_concepts.md](/learning-modules/intro-ds-module/05_02_data_integration_concepts.md)
 
 ---
@@ -73,9 +73,14 @@ Motivation  →  Concepts  →  Application
 ```
 
 [Why integrate data?](05_01_data_integration_motivation.md) establishes why source and alignment
-decisions affect scientific results. This page gives you the vocabulary and
-decision model required by [the maize and precipitation integration
-application](05_03_data_integration_application.md).
+decisions affect scientific results. This page gives you a general vocabulary
+and decision model demonstrated in the [maize-yield worked
+example](05_03_data_integration_application.md).
+
+The word **source** includes data produced inside the same project. An assay
+table and sample register, an experimental outcome file and randomization
+record, or field observations and sensor data require the same explicit
+alignment reasoning as two externally provided datasets.
 
 Use the concepts as questions:
 

@@ -1,8 +1,8 @@
-# 7.3) Visualize maize yield and precipitation
+# 7.3) Apply data visualization: maize-yield worked example
 
 ---
 
-- Last Update: 2026-08-21
+- Last Update: 2026-09-03
 - Source: [07_03_data_visualization_application.md](/learning-modules/intro-ds-module/07_03_data_visualization_application.md)
 - Estimated completion time: 6–8 hours
 - Independent extension: 2–3 hours
@@ -17,6 +17,7 @@
 - [Learning objectives](#learning-objectives)
 - [Place in the session](#place-in-the-session)
 - [Scenario and deliverables](#scenario-and-deliverables)
+  - [Transfer the workflow to another study design](#transfer-the-workflow-to-another-study-design)
 - [Before you begin](#before-you-begin)
 - [1. State visual questions and plot contracts](#1-state-visual-questions-and-plot-contracts)
 - [2. Inspect the analytical artifacts](#2-inspect-the-analytical-artifacts)
@@ -70,6 +71,11 @@ acquire, repair, or edit data.
 
 ## Scenario and deliverables
 
+> **Worked-example scope:** The supplied figures use countries, years, yield,
+> and precipitation. Treat these as one implementation of a general visual
+> workflow: define the comparison, identify the observation grain, choose an
+> encoding, inspect alternatives, and communicate limitations.
+
 The project team wants a small visual story that answers:
 
 > How do maize yield and growing-season precipitation vary across the selected
@@ -81,10 +87,24 @@ The required deliverables are:
 scripts/visualize-maize-data.R
 figures/maize-yield-distribution.png
 figures/maize-yield-trends.png
-figures/growing-season-precipitation.png
+figures/growing-season-precipitation-trends.png
 figures/yield-versus-precipitation.png
-figures/maize-yield-communication.png
+figures/growing-season-precipitation-distribution-by-country.png
 ~~~
+
+### Transfer the workflow to another study design
+
+| Project context | Useful first views | Structure to keep visible |
+| --- | --- | --- |
+| Laboratory | Distributions, replicate agreement, calibration or control plots | Batch, assay, sample, replicate type, detection limits |
+| Field experiment | Treatment distributions, block/site panels, outcome by treatment | Assignment, blocks, replicates, repeated occasions |
+| Field observation | Coverage maps, group distributions, trajectories, exposure-outcome plots | Sampling groups, sites, repeated units, missing coverage |
+| Secondary data | Entity comparisons, time series, maps, variable relationships | Reporting grain, revisions, flags, aggregation and spatial support |
+
+Replace country facets with scientifically relevant groups such as treatment,
+batch, block, site, sampling stratum, or provider entity. A grouping variable
+should reflect the study question and design rather than merely produce a
+visually convenient layout.
 
 The first four figures support exploration; the final figure should focus on
 one comparison for communication. Also provide a short interpretation that
@@ -359,7 +379,31 @@ Inspect sensitivity to bin width and shared versus free scales, and explain
 why the value should not be described simply as “rainfall received by maize.”
 
 ~~~r
-save_figure("growing-season-precipitation.png", precipitation_plot)
+save_figure(
+  "growing-season-precipitation-distribution-by-country.png",
+  precipitation_plot
+)
+~~~
+
+Complement the distribution with a time-ordered view so shifts, cycles, gaps,
+and unusual seasons remain visible:
+
+~~~r
+precipitation_trends <- ggplot(
+  integrated,
+  aes(x = year, y = growing_season_precipitation_mm)
+) +
+  geom_line(colour = "#3B8B47", linewidth = 0.5, na.rm = TRUE) +
+  geom_point(colour = "#3B8B47", size = 0.8, na.rm = TRUE) +
+  facet_wrap(vars(project_country_name), ncol = 3) +
+  labs(
+    title = "Growing-season precipitation over time",
+    x = "Season-ending year",
+    y = "Country-area seasonal precipitation (mm)"
+  ) +
+  theme_minimal(base_size = 10)
+
+save_figure("growing-season-precipitation-trends.png", precipitation_trends)
 ~~~
 
 ---
@@ -439,7 +483,7 @@ title describes the variables and scope, while the accompanying prose states
 a visible pattern and its uncertainty. Revise the title if your evidence
 supports a more precise, qualified statement.
 
-Save the result separately:
+Prototype the refinement in code and compare it with the exploratory version:
 
 ~~~r
 communication_plot <- yield_trends +
@@ -452,8 +496,11 @@ communication_plot <- yield_trends +
     )
   )
 
-save_figure("maize-yield-communication.png", communication_plot)
 ~~~
+
+The project need not retain a duplicate figure when the refined version does
+not serve a distinct purpose. If it does, add a clearly named output to the
+script and artifact registry rather than exporting it manually.
 
 ---
 

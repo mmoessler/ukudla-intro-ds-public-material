@@ -7,6 +7,21 @@
 
 ---
 
+## Outline
+
+- [Outline](#outline)
+- [Learning objectives](#learning-objectives)
+- [Git records project history](#git-records-project-history)
+- [GitHub supports shared work](#github-supports-shared-work)
+- [Four states of a tracked change](#four-states-of-a-tracked-change)
+- [A minimal example](#a-minimal-example)
+- [Branches and synchronization](#branches-and-synchronization)
+- [Track deliberately](#track-deliberately)
+- [Relationship to the other pages](#relationship-to-the-other-pages)
+- [Key message](#key-message)
+
+---
+
 ## Learning objectives
 
 After reading this page, you should be able to:
@@ -76,7 +91,7 @@ Inspecting them is part of the method, not merely troubleshooting.
 
 ---
 
-### A minimal example
+## A minimal example
 
 Consider a single change to `README.md`:
 

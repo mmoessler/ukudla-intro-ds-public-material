@@ -2,7 +2,7 @@
 
 ---
 
-- Last Update: 2026-08-25
+- Last Update: 2026-09-03
 - Source: [08_02_descriptive_analysis_concepts.md](/learning-modules/intro-ds-module/08_02_descriptive_analysis_concepts.md)
 - Estimated reading time: 60 minutes
 - Estimated activity time: 30 minutes
@@ -67,9 +67,9 @@ Motivation  →  Concepts  →  Application
 ~~~
 
 [Why describe data numerically?](08_01_descriptive_analysis_motivation.md) explains why
-precise summaries and temporal stability matter. This page provides the tools
-used in [the maize descriptive-analysis
-application](08_03_descriptive_analysis_application.md).
+precise summaries and temporal stability matter. This page provides general
+tools demonstrated in [the maize-yield worked
+example](08_03_descriptive_analysis_application.md).
 
 Use one central question throughout:
 
@@ -261,27 +261,29 @@ proportion of variance explained outside a specified model.
 
 ## Separate pooled and within-group association
 
-A pooled correlation combines within-country variation with differences
-between country means. It may answer a different question from correlations
-calculated separately for each country.
+A pooled correlation combines within-group variation with differences between
+group means. It may answer a different question from correlations calculated
+separately by treatment, batch, site, sampling stratum, entity, or period.
 
-Countries with higher average precipitation may also have higher average
-yield, producing a positive pooled relationship even if wetter years within
-each country are not consistently higher-yielding — or the reverse. This is
-related to aggregation effects and Simpson's paradox.
+Groups with higher average exposure may also have higher average outcomes,
+producing a positive pooled relationship even if the within-group association
+is absent or reversed. This is related to aggregation effects and Simpson's
+paradox.
 
-Compare the pooled scatterplot and correlation against country-faceted
-plots and country-specific correlations, period-specific correlations, and,
-if appropriate, deviations from country-specific means. These are
-descriptive views, not substitutes for a model that explicitly represents
-country and time.
+Compare pooled results with design-relevant group and period views and, where
+appropriate, deviations from group means. For experiments, preserve treatment,
+block, and replicate structure; for laboratory work, distinguish biological
+from technical replication; for observational data, consider clusters and
+sampling strata. These descriptive views do not replace a model that
+represents the design.
 
 ---
 
 ## Account for ordered observations
 
-Country-year observations are ordered in time. Adjacent years can be more
-similar than distant years, so observations may not be independent.
+Repeated and ordered observations can be dependent. Adjacent times, samples
+from one batch, plots in one block, or repeated visits to one unit may be more
+similar than observations drawn from different groups.
 
 **Autocovariance** and **autocorrelation** quantify association between a
 series and lagged versions of itself — a lag-one autocorrelation compares
@@ -311,11 +313,11 @@ when:
 
 Stationarity is a property of a data-generating process, not merely a table:
 a finite series can provide evidence consistent or inconsistent with it, but
-cannot prove universal stability. Different variables or groups can have
-different stability — yield may display a trend while deviations from that
-trend are more stable, and one country may show a structural change that
-another does not. State exactly which series, period, and property are
-under discussion.
+cannot prove universal stability. Different variables, batches, sites, groups,
+or periods can have different stability. State exactly which process, ordered
+index, population, and property are under discussion. For unordered
+cross-sectional experiments, exchangeability and design structure may be more
+relevant than time-series stationarity.
 
 ---
 

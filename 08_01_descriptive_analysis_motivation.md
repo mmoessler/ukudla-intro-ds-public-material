@@ -2,7 +2,7 @@
 
 ---
 
-- Last Update: 2026-08-25
+- Last Update: 2026-09-03
 - Source: [08_01_descriptive_analysis_motivation.md](/learning-modules/intro-ds-module/08_01_descriptive_analysis_motivation.md)
 - Estimated reading time: 20 minutes
 - Estimated activity time: 10 minutes
@@ -20,7 +20,7 @@
 - [Data-generating processes can change](#data-generating-processes-can-change)
 - [Why stationarity matters before modeling](#why-stationarity-matters-before-modeling)
 - [What can go wrong](#what-can-go-wrong)
-- [How this connects to the maize-yield project](#how-this-connects-to-the-maize-yield-project)
+- [Across study designs and in the worked example](#across-study-designs-and-in-the-worked-example)
 - [Initial activity](#initial-activity)
 - [Check your understanding](#check-your-understanding)
 - [Further resources](#further-resources)
@@ -51,15 +51,15 @@ Motivation  →  Concepts  →  Application
  this page
 ~~~
 
-Data Visualization made distributions, country differences, temporal change,
-and possible yield-precipitation relationships visible. Descriptive Data
-Analysis now asks how to quantify those patterns without reducing them to a
-misleading single number.
+Data Visualization made distributions, group differences, ordered change, and
+possible relationships visible. Descriptive Data Analysis now asks how to
+quantify those patterns without reducing them to a misleading single number or
+ignoring the study design.
 
 [Understand descriptive-data-analysis concepts](08_02_descriptive_analysis_concepts.md)
-develops the required measures and the idea of stationarity. [Describe maize
-yield and precipitation](08_03_descriptive_analysis_application.md) applies them in the
-example project.
+develops the required measures and the idea of stationarity. The
+[application](08_03_descriptive_analysis_application.md) demonstrates them with
+maize data and provides transfer guidance.
 
 ---
 
@@ -176,7 +176,17 @@ within that setup, not a universal verdict.
 
 ---
 
-## How this connects to the maize-yield project
+## Across study designs and in the worked example
+
+Laboratory descriptions must distinguish biological samples, technical
+replicates, controls, and batches. Experimental descriptions should respect
+treatment assignment, blocks, sites, and repeated measurements. Observational
+descriptions should report sampling groups, clusters, repeated units, and
+weights where applicable. Secondary-data descriptions must retain reporting
+grain, coverage, flags, and revisions.
+
+The maize-yield project then demonstrates group and period summaries for a
+country-year panel.
 
 The example project contains 297 country-year observations for nine countries
 from 1990 through 2022, combining national maize yield (tonnes per hectare)

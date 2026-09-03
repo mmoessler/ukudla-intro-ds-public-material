@@ -2,7 +2,7 @@
 
 ---
 
-- Last Update: 2026-08-25
+- Last Update: 2026-09-03
 - Source: [09_01_explanatory_analysis_motivation.md](/learning-modules/intro-ds-module/09_01_explanatory_analysis_motivation.md)
 - Estimated reading time: 20 minutes
 - Estimated activity time: 10 minutes
@@ -18,9 +18,10 @@
 - [A regression coefficient does not create causality](#a-regression-coefficient-does-not-create-causality)
 - [Causal questions compare potential outcomes](#causal-questions-compare-potential-outcomes)
 - [Research design comes before estimation](#research-design-comes-before-estimation)
+- [Study design changes what can be explained](#study-design-changes-what-can-be-explained)
 - [The precipitation intervention is difficult to define](#the-precipitation-intervention-is-difficult-to-define)
 - [What can go wrong](#what-can-go-wrong)
-- [How this connects to the maize-yield project](#how-this-connects-to-the-maize-yield-project)
+- [Worked example: the maize-yield project](#worked-example-the-maize-yield-project)
 - [Initial activity](#initial-activity)
 - [Check your understanding](#check-your-understanding)
 - [Further resources](#further-resources)
@@ -50,32 +51,27 @@ Motivation  →  Concepts  →  Application
  this page
 ~~~
 
-Descriptive Data Analysis quantified distributions, temporal changes, and
-yield-precipitation associations, deliberately avoiding causal language. This
-session asks whether and under which assumptions an observed relationship can
-support a causal explanation.
+Descriptive Data Analysis quantified distributions, changes, and associations,
+deliberately avoiding causal language. This session asks whether and under
+which assumptions a comparison can support a causal explanation.
 
 [Concepts](09_02_explanatory_analysis_concepts.md) separates causal questions,
-identification, and estimation. [Application](09_03_explanatory_analysis_application.md)
-applies that framework to the example project.
+identification, and estimation across experimental and observational designs.
+The [application](09_03_explanatory_analysis_application.md) uses an aggregated
+observational example to show why causal conclusions sometimes remain limited.
 
 ---
 
 ## Description is not explanation
 
-A descriptive analysis can show that two variables vary together in the
-observed data — for example, that maize yield differs between wetter and
-drier country-years, or that the association differs across countries and
-periods. These findings do not answer what would happen if precipitation
-changed while other conditions stayed comparable.
+A descriptive analysis can show that outcomes differ between observed
+treatment, exposure, site, batch, or period groups. These findings do not by
+themselves answer what would happen to the same target population under an
+alternative intervention.
 
-Several distinct processes can produce the same observed association:
-
-- precipitation may affect plant growth and therefore yield;
-- temperature and atmospheric conditions may affect both rainfall and yield;
-- countries may differ in climate, soils, irrigation, inputs, varieties, and reporting;
-- both precipitation and yield may change over time; or
-- measurement, aggregation, or selection into the dataset may distort the comparison.
+Several distinct processes can produce the same observed association: a real
+effect, common causes, treatment selection, batch or site differences,
+measurement error, aggregation, attrition, or selection into the dataset.
 
 Explanatory modeling must distinguish these possibilities through a causal
 question, a defensible research design, explicit assumptions, and a matching
@@ -161,6 +157,21 @@ unsupported causal claim.
 
 ---
 
+## Study design changes what can be explained
+
+In a laboratory or field experiment, randomized assignment can create a
+credible comparison when the intervention, experimental unit, outcome timing,
+and analysis preserve the design. Blocking, clustering, noncompliance,
+attrition, spillover, and measurement remain relevant.
+
+In a field observational or secondary-data study, exposure is not assigned by
+the analyst. Identification then requires an explicit account of why exposed
+and comparison units differ, which pre-exposure common causes are measured,
+whether relevant contrasts have support, and how selection and measurement
+affect the result.
+
+The worked example deliberately illustrates a difficult observational case.
+
 ## The precipitation intervention is difficult to define
 
 The example project records October-April country-area precipitation totals.
@@ -190,7 +201,7 @@ measurements aligned to the growing season.
 
 ---
 
-## How this connects to the maize-yield project
+## Worked example: the maize-yield project
 
 The project provides 297 observations for nine countries from 1990 through
 2022, each combining national maize yield with a country-area seasonal

@@ -2,7 +2,7 @@
 
 ---
 
-- Last Update: 2026-08-02
+- Last Update: 2026-09-03
 - Source: [03_04_remote_computing_linux_application.md](/learning-modules/intro-ds-module/03_04_remote_computing_linux_application.md)
 
 ---
@@ -98,7 +98,7 @@ tail -n 10 scripts/run-all.R           # last lines
 less README.md                         # scrollable viewer — /word to search, q to quit
 wc -l scripts/*.R                      # count lines
 grep -R -n "renv" docs                 # search text
-head -n 5 data-processed/maize-yield-panel.csv  # peek at processed data
+head -n 5 data/derived/maize-yield-panel.csv  # peek at derived data
 ```
 
 A pipe, `|`, sends the output of the command on its left to the input of the

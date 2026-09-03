@@ -1,8 +1,8 @@
-# 10.3) Evaluate predictive models for maize yield
+# 10.3) Apply predictive analysis: maize-yield worked example
 
 ---
 
-- Last Update: 2026-08-25
+- Last Update: 2026-09-03
 - Source: [10_03_predictive_analysis_application.md](/learning-modules/intro-ds-module/10_03_predictive_analysis_application.md)
 - Estimated completion time: 6–8 hours; independent extension: 2–3 hours
 - Prerequisites: Motivation and Concepts pages; Descriptive Data Analysis and Explanatory Modeling workflows
@@ -16,6 +16,7 @@
 - [Learning objectives](#learning-objectives)
 - [Place in the session](#place-in-the-session)
 - [Scenario and deliverables](#scenario-and-deliverables)
+  - [Transfer the workflow to another study design](#transfer-the-workflow-to-another-study-design)
 - [Before you begin](#before-you-begin)
 - [1. Write the prediction contract](#1-write-the-prediction-contract)
 - [2. Audit the temporal split](#2-audit-the-temporal-split)
@@ -69,6 +70,11 @@ not interpret predictive coefficients as causal effects.
 
 ## Scenario and deliverables
 
+> **Worked-example scope:** The supplied task predicts later country-year
+> observations. Other projects may predict new samples, plots, sites, farms,
+> batches, or future measurement occasions. The evaluation split must reproduce
+> that intended use rather than copy the example's calendar-year split.
+
 The project team wants a transparent benchmark for predicting recently
 observed national maize yields:
 
@@ -84,13 +90,27 @@ Use or create these artifacts:
 
 ~~~text
 docs/predictive-modeling.md
-scripts/model-maize-yield.R
+scripts/predict-maize-yield.R
 results/tables/maize-yield-predictions.csv
 results/tables/model-performance.csv
 results/tables/predictive-performance-by-country.csv
 figures/predictive-observed-versus-predicted.png
 results/predictive-modeling-conclusion.md
 ~~~
+
+### Transfer the workflow to another study design
+
+| Intended use | Suitable evaluation boundary | Leakage to prevent |
+| --- | --- | --- |
+| New laboratory samples | Hold out independent biological samples or future batches | Aliquots or technical replicates of one sample crossing splits; batch-wide preprocessing |
+| New experimental units | Hold out units, blocks, sites, or a later experiment as use requires | Repeated measures or treatment summaries shared across splits |
+| New observational units or visits | Split by unit, site, cluster, or time to match deployment | Records from one unit in both sets; post-outcome or future information |
+| New secondary-data periods or entities | Hold out later periods, entities, or both | Revisions, future aggregates, or preprocessing learned from the test domain |
+
+Define the target, prediction time, information availability, deployment
+population, and cost of errors before choosing the split or metric. A random
+row split is appropriate only when future use truly concerns exchangeable,
+independent rows from the same population.
 
 The first two generated tables belong to the starting workflow; add the
 country-level table, diagnostic figure, and conclusion reproducibly rather
@@ -124,7 +144,7 @@ docs/data-preparation.md
 docs/descriptive-data-analysis.md
 docs/explanatory-modeling.md
 scripts/functions.R
-scripts/model-maize-yield.R
+scripts/predict-maize-yield.R
 ~~~
 
 Before running the script, predict which candidate will perform best and
@@ -218,7 +238,7 @@ training.
 
 ## 3. Inspect the candidate baselines
 
-Open `scripts/model-maize-yield.R` and identify every object learned from
+Open `scripts/predict-maize-yield.R` and identify every object learned from
 training data:
 
 ~~~r
@@ -248,7 +268,7 @@ fail, and a few large errors can affect RMSE more strongly than MAE.
 From the project root, run:
 
 ~~~bash
-Rscript scripts/model-maize-yield.R
+Rscript scripts/predict-maize-yield.R
 ~~~
 
 Alternatively, run the complete pipeline when dependencies are available:

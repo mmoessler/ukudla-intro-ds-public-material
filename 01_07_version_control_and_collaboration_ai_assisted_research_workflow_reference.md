@@ -2,7 +2,7 @@
 
 ---
 
-- Last Update: 2026-08-29
+- Last Update: 2026-09-03
 - Source: [01_07_version_control_and_collaboration_ai_assisted_research_workflow_reference.md](/learning-modules/intro-ds-module/01_07_version_control_and_collaboration_ai_assisted_research_workflow_reference.md)
 
 ---
@@ -817,8 +817,8 @@ Ask an AI coding agent to add one data-management check without changing the raw
 
 Suitable task:
 
-> Review `metadata/data-dictionary.csv` against the columns in
-> `data-raw/faostat-maize-yield-sample.csv`. Add a validation failure when the
+> Review `metadata/faostat-data-dictionary.csv` against the columns in
+> `data/input/faostat-maize-yield-sample.csv`. Add a validation failure when the
 > input contains an undocumented column or the dictionary describes a column
 > absent from the input. Do not edit either CSV. Update the validation report
 > and explain the limitation of column-name agreement.
@@ -857,7 +857,7 @@ git switch -c feature/validate-dictionary-coverage
 ```bash
 git status --short
 git diff
-sha256sum data-raw/faostat-maize-yield-sample.csv
+sha256sum data/input/faostat-maize-yield-sample.csv
 ```
 
 Confirm that the source checksum still matches the recorded provenance.

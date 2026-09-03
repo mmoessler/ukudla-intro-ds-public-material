@@ -2,7 +2,7 @@
 
 ---
 
-- Last Update: 2026-08-25
+- Last Update: 2026-09-03
 - Source: [10_02_predictive_analysis_concepts.md](/learning-modules/intro-ds-module/10_02_predictive_analysis_concepts.md)
 - Estimated reading time: 60 minutes
 - Estimated activity time: 30 minutes
@@ -62,7 +62,7 @@ Motivation  →  Concepts  →  Application
 [Why predictive modeling requires unseen-data
 evaluation](10_01_predictive_analysis_motivation.md) introduced the need for an
 intended use and representative holdout. This page supplies the concepts used
-in [the maize-yield predictive application](10_03_predictive_analysis_application.md).
+in [the maize-yield worked example](10_03_predictive_analysis_application.md).
 
 Use one organizing principle:
 
@@ -77,17 +77,17 @@ A **prediction contract** is a documented agreement about what will be
 predicted, when, from which information, for whom, and how success will be
 judged. It prevents the task from changing after results are visible.
 
-| Component | Question | Maize teaching task |
+| Component | Question | General specification |
 | --- | --- | --- |
-| Target | What value and scale are predicted? | Annual national log maize yield |
-| Unit | What receives one prediction? | One country-year |
-| Target population | Where should predictions apply? | Project countries in later observed years |
-| Prediction time | When is the prediction issued? | Represented as prediction of held-out later years |
-| Horizon | How far ahead is the outcome? | Not operationally specified; a teaching limitation |
-| Information set | What is available then? | Country identity and calendar year |
-| Evaluation | Which observations remain unseen? | 2018–2022 country-years |
-| Loss and metrics | Which errors matter? | Absolute and squared log-scale errors |
-| Intended use | Which decision will use it? | Method demonstration, not operational allocation |
+| Target | What value and scale are predicted? | A named outcome on a defined scale |
+| Unit | What receives one prediction? | A sample, plot, farm, visit, entity, or period |
+| Target population | Where should predictions apply? | The future deployment population |
+| Prediction time | When is the prediction issued? | Before the outcome and unavailable predictors are observed |
+| Horizon | How far ahead is the outcome? | A specified interval or transfer setting |
+| Information set | What is available then? | Only measurements available at prediction time |
+| Evaluation | Which observations remain unseen? | Units or periods representing intended use |
+| Loss and metrics | Which errors matter? | Loss tied to the decision and outcome scale |
+| Intended use | Which decision will use it? | A stated supported use and exclusions |
 
 The limitation in the horizon is important. Calling this workflow a forecast
 would imply an operational issue date and information cutoff that the exercise
@@ -116,11 +116,11 @@ period rather than a permanent third partition; for temporal data,
 rolling-origin or forward-chaining resampling usually represents later
 prediction better than ordinary random cross-validation.
 
-The current maize benchmark compares a small set of predefined candidates
-without extensive tuning, but its 2018–2022 test period must still stay
-excluded from fitting and candidate invention — repeatedly changing the
-workflow after viewing test errors turns the test data into validation data
-and removes the independent final assessment.
+A small benchmark can compare predefined candidates without extensive tuning,
+but its test observations must still remain excluded from fitting and
+candidate invention. Repeatedly changing the workflow after viewing test
+errors turns the test data into validation data and removes the independent
+final assessment.
 
 ---
 
@@ -138,10 +138,9 @@ A split is part of the scientific design. Common strategies include:
 - **rolling-origin evaluation** when several successive past-to-future tests
   are needed.
 
-The maize task predicts later years for countries already present in
-training, so a temporal split is appropriate; it does **not** test
-performance for a new country — a leave-country-out design would answer that
-different question.
+Choose the boundary that matches use: holding out aliquots does not evaluate
+new biological samples, holding out plots may not evaluate a new site, and a
+temporal split for known entities does not evaluate transfer to new entities.
 
 Do not select the split because it produces favorable metrics; record its
 boundary, rationale, and exclusions before inspecting test outcomes.
@@ -264,16 +263,16 @@ on `log_yield`, so they are not errors in tonnes per hectare.
 One aggregate metric can hide important failure modes. Inspect:
 
 - row-level observations, predictions, and errors;
-- errors by country and year;
+- errors by treatment, batch, site, group, or period;
 - error distributions and extreme misses;
 - systematic over- or underprediction;
 - performance for high and low target values; and
 - whether candidate rankings change across subgroups.
 
-Country-level results contain only five test observations per country. They are
-diagnostic signals, not precise country performance claims. Always report their
-denominators. Observed-versus-predicted time plots can expose bias and missed
-changes that MAE and RMSE compress into one number.
+Subgroup results with few independent test observations are diagnostic signals,
+not precise performance claims. Always report their denominators.
+Observed-versus-predicted plots can expose bias and missed structure that MAE
+and RMSE compress into one number.
 
 ---
 
@@ -285,20 +284,19 @@ error, and simpler models can **underfit** by omitting stable predictive
 structure. Validation evidence, not test-set optimization, should balance
 these risks.
 
-Repeated country observations may be autocorrelated — adjacent years are
-often more similar than distant ones — so a random split can place near
-neighbors from the same country on both sides and overstate later
-performance.
+Related observations may be dependent—technical replicates share a sample,
+plots share a block or site, and repeated visits share a unit. A random row
+split can place close relatives on both sides and overstate performance.
 
 **Distribution shift** means inputs, outcomes, or their relationship change
-between development and use. Trends, agricultural innovation, climate
-extremes, measurement changes, and new countries can all create shift;
+between development and use. New batches, instruments, sites, seasons,
+populations, practices, and measurement protocols can all create shift;
 compare periods descriptively, but do not redesign the final evaluation
 silently after inspecting test outcomes.
 
-Stationarity cannot be proved from a short historical panel. The design
-should anticipate change, and the conclusion should stay bounded to the
-evaluated countries and years.
+Stability cannot be assumed from one finite dataset. The design should
+anticipate change, and the conclusion should stay bounded to the evaluated
+units, settings, and periods.
 
 ---
 

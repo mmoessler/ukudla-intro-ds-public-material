@@ -19,9 +19,9 @@
 - [5. Add your repository as `origin`](#5-add-your-repository-as-origin)
 - [6. Push to your repository](#6-push-to-your-repository)
 - [7. Verify the setup](#7-verify-the-setup)
-- [Videos](#videos)
 - [Your normal workflow](#your-normal-workflow)
 - [Receive later course updates](#receive-later-course-updates)
+- [Videos](#videos)
 - [Troubleshooting](#troubleshooting)
   - [Problem 01](#problem-01)
   - [Problem 02](#problem-02)
@@ -235,23 +235,6 @@ You can inspect one remote in more detail with:
 git remote show origin
 ```
 
----
-
-## Videos
-
-No general video uses the course-specific repository addresses in this guide. Follow the written commands above for the exercise, and use these videos to reinforce the underlying operations:
-
-- [Clone a GitHub repository](https://www.youtube.com/watch?v=RGOj5yH7evk&t=870s) — freeCodeCamp course, starting at its cloning demonstration.
-- [Push a local repository to GitHub using SSH](https://www.youtube.com/watch?v=RGOj5yH7evk&t=1230s) — covers SSH authentication followed by the first push.
-- [GitHub for Beginners](https://www.youtube.com/playlist?list=PL0lo9MOBetEFcp4SCWinBdpml9B2U25-f) — GitHub's official series on repositories and GitHub workflows.
-
-The cloning demonstration uses an editor interface, whereas this exercise uses terminal commands. Both approaches perform the same Git operation. The course-specific remote configuration remains:
-
-```text
-origin    git@github.com:YOUR-USERNAME/maize-yield-project.git
-upstream  git@github.com:mmoessler/maize-yield-project.git
-```
-
 ## Your normal workflow
 
 After editing a file:
@@ -286,6 +269,23 @@ git log --oneline main..upstream/main
 ```
 
 Integrating upstream changes may require a merge or rebase and may produce conflicts. Your instructor will specify the appropriate method for the course exercise. Fetching alone does not change your working files.
+
+---
+
+## Videos
+
+No general video uses the course-specific repository addresses in this guide. Follow the written commands above for the exercise, and use these videos to reinforce the underlying operations:
+
+- [Clone a GitHub repository](https://www.youtube.com/watch?v=RGOj5yH7evk&t=870s) — freeCodeCamp course, starting at its cloning demonstration.
+- [Push a local repository to GitHub using SSH](https://www.youtube.com/watch?v=RGOj5yH7evk&t=1230s) — covers SSH authentication followed by the first push.
+- [GitHub for Beginners](https://www.youtube.com/playlist?list=PL0lo9MOBetEFcp4SCWinBdpml9B2U25-f) — GitHub's official series on repositories and GitHub workflows.
+
+The cloning demonstration uses an editor interface, whereas this exercise uses terminal commands. Both approaches perform the same Git operation. The course-specific remote configuration remains:
+
+```text
+origin    git@github.com:YOUR-USERNAME/maize-yield-project.git
+upstream  git@github.com:mmoessler/maize-yield-project.git
+```
 
 ---
 

@@ -1,8 +1,8 @@
-# 4.4) Manage the maize-yield data
+# 4.4) Apply data management: maize-yield worked example
 
 ---
 
-- Last Update: 2026-08-29
+- Last Update: 2026-09-03
 - Source: [04_04_data_management_application.md](/learning-modules/intro-ds-module/04_04_data_management_application.md)
 
 ---
@@ -13,6 +13,7 @@
 - [Learning objectives](#learning-objectives)
 - [Place in the session](#place-in-the-session)
 - [Scenario and deliverable](#scenario-and-deliverable)
+  - [Transfer the workflow to another study design](#transfer-the-workflow-to-another-study-design)
 - [Before you begin](#before-you-begin)
 - [1. Preserve and identify the raw input](#1-preserve-and-identify-the-raw-input)
 - [2. Establish the dataset grain](#2-establish-the-dataset-grain)
@@ -77,22 +78,41 @@ The numbered steps apply those concepts. Do not continue past a failed expectati
 
 ## Scenario and deliverable
 
+> **Worked-example scope:** The numbered instructions use a secondary FAOSTAT
+> dataset so that every learner can reproduce the same result. The method is
+> defined by its decisions and evidence, not by this source. Use the transfer
+> table below when applying it to data collected in another study design.
+
 You have received a fixed FAOSTAT teaching extract of maize production, harvested area, and yield for selected Southern African countries. Before anyone prepares, visualizes, or models these values, the project team must determine what they mean and whether they match the expected structure.
 
 Your task is to create an inspectable data-management package:
 
 ```text
 maize-yield-project/
-├── data-raw/
-│   └── faostat-maize.csv       # supplied input; remains unchanged
+├── data/
+│   └── input/
+│       └── faostat-maize-yield-sample.csv  # supplied input; unchanged
 ├── metadata/
-│   ├── data-dictionary.csv     # meaning of project variables
+│   ├── faostat-maize-yield-data-dictionary.csv
 │   └── provenance.yml          # source and history of the input
 ├── scripts/
 │   └── validate-data.R         # repeatable expectations and checks
 └── reports/
     └── data-validation.html    # findings, limitations, and status
 ```
+
+### Transfer the workflow to another study design
+
+| Project context | Define as the managed input | Record in metadata and provenance | Validate before use |
+| --- | --- | --- | --- |
+| Laboratory | Instrument export or assay result | Sample lineage, protocol, instrument, batch, calibration, detection limits | Sample IDs, units, controls, flags, ranges, replicate structure |
+| Field experiment | Plot- or unit-level observations | Design, treatment assignment, blocks, protocol deviations, collection dates | Randomization structure, treatment codes, plot IDs, missing plots, measurement ranges |
+| Field observation | Farm, plot, organism, or visit records | Sampling frame, recruitment or site selection, measurement protocol, consent and sensitivity | Coverage, repeated visits, selection, identifiers, missingness, plausible values |
+| Secondary data | Preserved provider snapshot | Provider, version, access method, license, revisions, definitions | File identity, provider codes, coverage, flags, keys, units |
+
+In every context, preserve the received or collected input, define its grain
+and key, document how values were produced, validate fitness for the intended
+question, and report unresolved concerns without silently repairing them.
 
 The package is complete when another person can determine:
 
@@ -118,7 +138,7 @@ ls data-raw metadata scripts reports
 The exercise assumes that the raw file is named:
 
 ```text
-data-raw/faostat-maize.csv
+data/input/faostat-maize-yield-sample.csv
 ```
 
 Do not open and resave the raw file in spreadsheet software — this can silently alter dates, encodings, numeric precision, delimiters, and quoting.
@@ -132,9 +152,9 @@ Create derived documentation and reports in separate directories; do not replace
 Inspect file properties from the terminal:
 
 ```bash
-ls -lh data-raw/faostat-maize.csv
-file data-raw/faostat-maize.csv
-sha256sum data-raw/faostat-maize.csv
+ls -lh data/input/faostat-maize-yield-sample.csv
+file data/input/faostat-maize-yield-sample.csv
+sha256sum data/input/faostat-maize-yield-sample.csv
 ```
 
 On systems without `sha256sum`, use an available SHA-256 tool and record which tool was used.
@@ -157,7 +177,7 @@ Read the file without modifying it:
 
 ```r
 maize_raw <- readr::read_csv(
-  "data-raw/faostat-maize.csv",
+  "data/input/faostat-maize-yield-sample.csv",
   show_col_types = FALSE
 )
 
@@ -205,7 +225,8 @@ Document your conclusion.
 
 ## 3. Create a data dictionary
 
-Create `metadata/data-dictionary.csv` with one row per retained source variable.
+Review or create `metadata/faostat-data-dictionary.csv` with one row per
+retained FAOSTAT source variable.
 
 Include:
 
@@ -240,7 +261,7 @@ Review the dictionary using these questions:
 Create `metadata/provenance.yml`:
 
 ```yaml
-artifact: data-raw/faostat-maize.csv
+artifact: data/input/faostat-maize-yield-sample.csv
 provider: Food and Agriculture Organization of the United Nations
 dataset: "record the exact dataset name"
 release: "record if available"
@@ -265,8 +286,8 @@ Confirm that each artifact has one clear role:
 
 | Artifact | Role | Typical Git decision |
 | --- | --- | --- |
-| `data-raw/faostat-maize.csv` | Unchanged source evidence | Decide from size, license, sensitivity, and reproducibility |
-| `metadata/data-dictionary.csv` | Meaning of project variables | Commit when it contains no restricted information |
+| `data/input/faostat-maize-yield-sample.csv` | Unchanged teaching input | Decide from size, license, sensitivity, and reproducibility |
+| `metadata/faostat-data-dictionary.csv` | Meaning of FAOSTAT source variables | Commit when it contains no restricted information |
 | `metadata/provenance.yml` | Source and artifact history | Commit after removing credentials or private locations |
 | `scripts/validate-data.R` | Repeatable expectations and checks | Commit |
 | `reports/data-validation.html` | Rendered findings for review | Follow the project's output policy |
@@ -277,7 +298,7 @@ Inspect the version-control state:
 
 ```bash
 git status --short
-git check-ignore -v data-raw/faostat-maize.csv
+git check-ignore -v data/input/faostat-maize-yield-sample.csv
 ```
 
 The second command reports the matching ignore rule, if any; no output does not mean committing the file is appropriate.
