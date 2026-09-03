@@ -1,0 +1,405 @@
+{
+    "id": "intro-ds-module-test",
+    "title": "Introduction to Data Science",
+    "navTitle": "Intro DS",
+    "startUrl": "https://ukudla-edu.uni-hohenheim.de/",
+    "pageFile": "",
+    "enabled": true,
+    "sessions": [
+        {
+            "id": "introduction",
+            "navTitle": "00-00: Intro",
+            "enabled": true,
+            "pages": [
+                {
+                    "id": "session-00-page-00",
+                    "navTitle": "Slides",
+                    "pageFile": "00_00_introduction_slides.md",
+                    "enabled": true
+                },
+                {
+                    "id": "example-ds-project",
+                    "navTitle": "Example DS Project",
+                    "pageFile": "00_01_introduction_example_project.md",
+                    "enabled": true
+                },
+                {
+                    "id": "rstudio-vs-code",
+                    "navTitle": "RStudio & VS Code",
+                    "pageFile": "00_02_introduction_rstudio_and_vs_code_setup.md",
+                    "enabled": true
+                }
+            ]
+        },
+        {
+            "id": "version-control",
+            "navTitle": "01-01: Git & GitHub",
+            "enabled": true,
+            "pages": [
+                {
+                    "id": "git-github-slides",
+                    "navTitle": "Slides",
+                    "pageFile": "01_00_version_control_and_collaboration_slides.md",
+                    "enabled": true
+                },
+                {
+                    "id": "git-github-motivation",
+                    "navTitle": "Motivation",
+                    "pageFile": "01_01_version_control_and_collaboration_motivation.md",
+                    "enabled": true
+                },
+                {
+                    "id": "version-control-concepts",
+                    "navTitle": "Concepts",
+                    "pageFile": "01_02_version_control_and_collaboration_concepts.md",
+                    "enabled": true
+                },
+                {
+                    "id": "git-github-setup",
+                    "navTitle": "Setup",
+                    "pageFile": "01_03_version_control_and_collaboration_setup.md",
+                    "enabled": true
+                },
+                {
+                    "id": "repository-setup",
+                    "navTitle": "Repository Setup",
+                    "pageFile": "01_04_version_control_and_collaboration_repository_setup.md",
+                    "enabled": true
+                },
+                {
+                    "id": "git-github-workflow",
+                    "navTitle": "Application",
+                    "pageFile": "01_05_version_control_and_collaboration_application.md",
+                    "enabled": true
+                },
+                {
+                    "id": "reproducible-ai-workflow",
+                    "navTitle": "VC & AI Workflow",
+                    "pageFile": "01_06_version_control_and_collaboration_ai_assisted_research_workflow.md",
+                    "enabled": true
+                },
+                {
+                    "id": "reproducible-ai-workflow-reference",
+                    "navTitle": "AI Workflow Reference",
+                    "pageFile": "01_07_version_control_and_collaboration_ai_assisted_research_workflow_reference.md",
+                    "enabled": true
+                }
+            ]
+        },
+        {
+            "id": "reproducible-environment",
+            "navTitle": "01-02: renv & Docker",
+            "enabled": true,
+            "pages": [
+                {
+                    "id": "re-slides",
+                    "navTitle": "Slides",
+                    "pageFile": "02_00_reproducible_environments_slides.md",
+                    "enabled": true
+                },
+                {
+                    "id": "re-motivation",
+                    "navTitle": "Motivation",
+                    "pageFile": "02_01_reproducible_environments_motivation.md",
+                    "enabled": true
+                },
+                {
+                    "id": "reproducible-environments-concepts",
+                    "navTitle": "Concepts",
+                    "pageFile": "02_02_reproducible_environments_concepts.md",
+                    "enabled": true
+                },
+                {
+                    "id": "renv-setup",
+                    "navTitle": "renv Setup",
+                    "pageFile": "02_03_reproducible_environments_renv_setup.md",
+                    "enabled": true
+                },
+                {
+                    "id": "renv-application",
+                    "navTitle": "renv Application",
+                    "pageFile": "02_04_reproducible_environments_renv_application.md",
+                    "enabled": true
+                },
+                {
+                    "id": "docker-setup",
+                    "navTitle": "Docker Setup",
+                    "pageFile": "02_05_reproducible_environments_docker_setup.md",
+                    "enabled": true
+                },
+                {
+                    "id": "docker-application",
+                    "navTitle": "Docker Application",
+                    "pageFile": "02_06_reproducible_environments_docker_application.md",
+                    "enabled": true
+                }
+            ]
+        },
+        {
+            "id": "remote-computing",
+            "navTitle": "01-03: ssh & Linux",
+            "enabled": true,
+            "pages": [
+                {
+                    "id": "ssh-linux-slides",
+                    "navTitle": "Slides",
+                    "pageFile": "03_00_remote_computing_slides.md",
+                    "enabled": true
+                },
+                {
+                    "id": "ssh-linux-motivation",
+                    "navTitle": "Motivation",
+                    "pageFile": "03_01_remote_computing_motivation.md",
+                    "enabled": true
+                },
+                {
+                    "id": "remote-computing-concepts",
+                    "navTitle": "Concepts",
+                    "pageFile": "03_02_remote_computing_concepts.md",
+                    "enabled": true
+                },
+                {
+                    "id": "ssh-application",
+                    "navTitle": "ssh Application",
+                    "pageFile": "03_03_remote_computing_ssh_application.md",
+                    "enabled": true
+                },
+                {
+                    "id": "linux-application",
+                    "navTitle": "Linux Application",
+                    "pageFile": "03_04_remote_computing_linux_application.md",
+                    "enabled": true
+                }
+            ]
+        },
+        {
+            "id": "data-management",
+            "navTitle": "02-01: Data Management",
+            "enabled": true,
+            "pages": [
+                {
+                    "id": "dm-slides",
+                    "navTitle": "Slides",
+                    "pageFile": "04_00_data_management_slides.md",
+                    "enabled": true
+                },
+                {
+                    "id": "dm-motivation",
+                    "navTitle": "Motivation",
+                    "pageFile": "04_01_data_management_motivation.md",
+                    "enabled": true
+                },
+                {
+                    "id": "dm-concepts",
+                    "navTitle": "Concepts",
+                    "pageFile": "04_02_data_management_concepts.md",
+                    "enabled": true
+                },
+                {
+                    "id": "dm-tools",
+                    "navTitle": "Tools",
+                    "pageFile": "04_03_data_management_tools.md",
+                    "enabled": true
+                },
+                {
+                    "id": "dm-application",
+                    "navTitle": "Application",
+                    "pageFile": "04_04_data_management_application.md",
+                    "enabled": true
+                },
+                {
+                    "id": "dm-tools-reference",
+                    "navTitle": "Tools Reference",
+                    "pageFile": "04_05_data_management_tools_reference.md",
+                    "enabled": true
+                }
+            ]
+        },
+        {
+            "id": "data-integration",
+            "navTitle": "02-02: Data Integration",
+            "enabled": true,
+            "pages": [
+                {
+                    "id": "di-slides",
+                    "navTitle": "Slides",
+                    "pageFile": "05_00_data_integration_slides.md",
+                    "enabled": true
+                },
+                {
+                    "id": "di-motivation",
+                    "navTitle": "Motivation",
+                    "pageFile": "05_01_data_integration_motivation.md",
+                    "enabled": true
+                },
+                {
+                    "id": "di-concepts",
+                    "navTitle": "Concepts",
+                    "pageFile": "05_02_data_integration_concepts.md",
+                    "enabled": true
+                },
+                {
+                    "id": "di-application",
+                    "navTitle": "Application",
+                    "pageFile": "05_03_data_integration_application.md",
+                    "enabled": true
+                }
+            ]
+        },
+        {
+            "id": "data-preparation",
+            "navTitle": "02-03: Data Preparation",
+            "enabled": true,
+            "pages": [
+                {
+                    "id": "data-preparation-slides",
+                    "navTitle": "Slides",
+                    "pageFile": "06_00_data_preparation_slides.md",
+                    "enabled": true
+                },
+                {
+                    "id": "data-preparation-motivation",
+                    "navTitle": "Motivation",
+                    "pageFile": "06_01_data_preparation_motivation.md",
+                    "enabled": true
+                },
+                {
+                    "id": "data-preparation-concepts",
+                    "navTitle": "Concepts",
+                    "pageFile": "06_02_data_preparation_concepts.md",
+                    "enabled": true
+                },
+                {
+                    "id": "data-preparation-application",
+                    "navTitle": "Application",
+                    "pageFile": "06_03_data_preparation_application.md",
+                    "enabled": true
+                }
+            ]
+        },
+        {
+            "id": "data-visualization",
+            "navTitle": "03-01: Data Visualization",
+            "enabled": true,
+            "pages": [
+                {
+                    "id": "data-visualization-slides",
+                    "navTitle": "Slides",
+                    "pageFile": "07_00_data_visualization_slides.md",
+                    "enabled": true
+                },
+                {
+                    "id": "data-visualization-motivation",
+                    "navTitle": "Motivation",
+                    "pageFile": "07_01_data_visualization_motivation.md",
+                    "enabled": true
+                },
+                {
+                    "id": "data-visualization-concepts",
+                    "navTitle": "Concepts",
+                    "pageFile": "07_02_data_visualization_concepts.md",
+                    "enabled": true
+                },
+                {
+                    "id": "data-visualization-application",
+                    "navTitle": "Application",
+                    "pageFile": "07_03_data_visualization_application.md",
+                    "enabled": true
+                }
+            ]
+        },
+        {
+            "id": "descriptive-analysis",
+            "navTitle": "03-02: Descriptive Analysis",
+            "enabled": true,
+            "pages": [
+                {
+                    "id": "descriptive-analysis-slides",
+                    "navTitle": "Slides",
+                    "pageFile": "08_00_descriptive_analysis_slides.md",
+                    "enabled": true
+                },
+                {
+                    "id": "descriptive-analysis-motivation",
+                    "navTitle": "Motivation",
+                    "pageFile": "08_01_descriptive_analysis_motivation.md",
+                    "enabled": true
+                },
+                {
+                    "id": "descriptive-analysis-concepts",
+                    "navTitle": "Concepts",
+                    "pageFile": "08_02_descriptive_analysis_concepts.md",
+                    "enabled": true
+                },
+                {
+                    "id": "descriptive-analysis-application",
+                    "navTitle": "Application",
+                    "pageFile": "08_03_descriptive_analysis_application.md",
+                    "enabled": true
+                }
+            ]
+        },
+        {
+            "id": "explanatory-analysis",
+            "navTitle": "03-03: Explanatory Analysis",
+            "enabled": true,
+            "pages": [
+                {
+                    "id": "explanatory-analysis-slides",
+                    "navTitle": "Slides",
+                    "pageFile": "09_00_explanatory_analysis_slides.md",
+                    "enabled": true
+                },
+                {
+                    "id": "explanatory-analysis-motivation",
+                    "navTitle": "Motivation",
+                    "pageFile": "09_01_explanatory_analysis_motivation.md",
+                    "enabled": true
+                },
+                {
+                    "id": "explanatory-analysis-concepts",
+                    "navTitle": "Concepts",
+                    "pageFile": "09_02_explanatory_analysis_concepts.md",
+                    "enabled": true
+                },
+                {
+                    "id": "explanatory-analysis-application",
+                    "navTitle": "Application",
+                    "pageFile": "09_03_explanatory_analysis_application.md",
+                    "enabled": true
+                }
+            ]
+        },
+        {
+            "id": "predictive-analysis",
+            "navTitle": "03-04: Predictive Analysis",
+            "enabled": true,
+            "pages": [
+                {
+                    "id": "predictive-analysis-slides",
+                    "navTitle": "Slides",
+                    "pageFile": "10_00_predictive_analysis_slides.md",
+                    "enabled": true
+                },
+                {
+                    "id": "predictive-analysis-motivation",
+                    "navTitle": "Motivation",
+                    "pageFile": "10_01_predictive_analysis_motivation.md",
+                    "enabled": true
+                },
+                {
+                    "id": "predictive-analysis-concepts",
+                    "navTitle": "Concepts",
+                    "pageFile": "10_02_predictive_analysis_concepts.md",
+                    "enabled": true
+                },
+                {
+                    "id": "predictive-analysis-application",
+                    "navTitle": "Application",
+                    "pageFile": "10_03_predictive_analysis_application.md",
+                    "enabled": true
+                }
+            ]
+        }
+    ]
+}
