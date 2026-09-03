@@ -1,0 +1,98 @@
+% Combined UKUDLA Introduction to Data Science course presentation.
+%
+% Compile this file from src/tex after compiling the individual topic decks.
+% The topic presentations remain the canonical editable sources; this file
+% provides one ordered course artifact without duplicating their preambles.
+
+\documentclass{article}
+
+\usepackage{pdfpages}
+\usepackage[hidelinks]{hyperref}
+
+\pagestyle{empty}
+
+\begin{document}
+
+% -----------------------------------------------------------------------------
+% Part 0: Introduction
+% -----------------------------------------------------------------------------
+
+\includepdf[
+  pages=-,
+  fitpaper=true,
+  addtotoc={1,section,1,{00 Introduction},topic-introduction}
+]{00_introduction.pdf}
+
+% -----------------------------------------------------------------------------
+% Part 1: Tools and Reproducibility
+% -----------------------------------------------------------------------------
+
+\includepdf[
+  pages=-,
+  fitpaper=true,
+  addtotoc={1,section,1,{01 Version Control and Collaboration},topic-version-control}
+]{01_version_control_and_collaboration.pdf}
+
+\includepdf[
+  pages=-,
+  fitpaper=true,
+  addtotoc={1,section,1,{02 Reproducible Environments},topic-environments}
+]{02_reproducible_environments.pdf}
+
+\includepdf[
+  pages=-,
+  fitpaper=true,
+  addtotoc={1,section,1,{03 Remote Computing},topic-remote-computing}
+]{03_remote_computing.pdf}
+
+% -----------------------------------------------------------------------------
+% Part 2: Data Foundations
+% -----------------------------------------------------------------------------
+
+\includepdf[
+  pages=-,
+  fitpaper=true,
+  addtotoc={1,section,1,{04 Data Management},topic-data-management}
+]{04_data_management.pdf}
+
+\includepdf[
+  pages=-,
+  fitpaper=true,
+  addtotoc={1,section,1,{05 Data Integration},topic-data-integration}
+]{05_data_integration.pdf}
+
+\includepdf[
+  pages=-,
+  fitpaper=true,
+  addtotoc={1,section,1,{06 Data Preparation},topic-data-preparation}
+]{06_data_preparation.pdf}
+
+% -----------------------------------------------------------------------------
+% Part 3: Data Analysis
+% -----------------------------------------------------------------------------
+
+\includepdf[
+  pages=-,
+  fitpaper=true,
+  addtotoc={1,section,1,{07 Data Visualization},topic-data-visualization}
+]{07_data_visualization.pdf}
+
+\includepdf[
+  pages=-,
+  fitpaper=true,
+  addtotoc={1,section,1,{08 Descriptive Analysis},topic-descriptive-analysis}
+]{08_descriptive_analysis.pdf}
+
+\includepdf[
+  pages=-,
+  fitpaper=true,
+  addtotoc={1,section,1,{09 Explanatory Analysis},topic-explanatory-analysis}
+]{09_explanatory_analysis.pdf}
+
+\includepdf[
+  pages=-,
+  fitpaper=true,
+  addtotoc={1,section,1,{10 Predictive Analysis},topic-predictive-analysis}
+]{10_predictive_analysis.pdf}
+
+\end{document}

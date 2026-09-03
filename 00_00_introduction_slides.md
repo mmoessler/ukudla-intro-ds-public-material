@@ -26,14 +26,14 @@ The slides can also be downloaded here
 
 ---
 
-## Complete Topic Content Pages
+## Complete Topic Guidelines Pages
 
-<pdfViewer filename="ukudla_intro_ds_module_topics_content_pages.pdf" label="UKUDLA Intro DS Topics Content Pages"></pdfViewer>
+<pdfViewer filename="ukudla_intro_ds_module_topics_guidelines_pages.pdf" label="UKUDLA Intro DS Topics Content Pages"></pdfViewer>
 
 All pages rendered as .pdf document can also be downloaded here,
 
-<file filename="ukudla_intro_ds_module_topics_content_pages.pdf" label="UKUDLA Intro DS Topics Content Pages (rendered)"></file>
+<file filename="ukudla_intro_ds_module_topics_guidelines_pages.pdf" label="UKUDLA Intro DS Topics Content Pages (rendered)"></file>
 
 All pages source as .md can also be downloaded here,
 
-<file filename="ukudla_intro_ds_module_topics_content_pages.md" label="UKUDLA Intro DS Topics Content Pages (source)"></file>
+<file filename="ukudla_intro_ds_module_topics_guidelines_pages.md" label="UKUDLA Intro DS Topics Content Pages (source)"></file>
