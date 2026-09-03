@@ -2,8 +2,9 @@
 
 ---
 
-- Last Update: 2026-09-03
-- Source: [10_02_predictive_analysis_concepts.md](/learning-modules/intro-ds-module/10_02_predictive_analysis_concepts.md)
+- Source: [10_02_predictive_analysis_concepts.md](https://github.com/mmoessler/ukudla-intro-ds-public-material/blob/main/10_02_predictive_analysis_concepts.md)
+- History: [Commit History](https://github.com/mmoessler/ukudla-intro-ds-public-material/commits/main/10_02_predictive_analysis_concepts.md)
+- Feedback: [Topic 10: Predictive Analysis](https://github.com/mmoessler/ukudla-intro-ds-public-material/discussions/11)
 - Estimated reading time: 60 minutes
 - Estimated activity time: 30 minutes
 

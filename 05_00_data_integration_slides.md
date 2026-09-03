@@ -2,8 +2,9 @@
 
 ---
 
-- Last Update: 2026-08-20
-- Source: [05_00_data_integration_slides.md](/learning-modules/intro-ds-module/05_00_data_integration_slides.md)
+- Source: [05_00_data_integration_slides.md](https://github.com/mmoessler/ukudla-intro-ds-public-material/blob/main/05_00_data_integration_slides.md)
+- History: [Commit History](https://github.com/mmoessler/ukudla-intro-ds-public-material/commits/main/05_00_data_integration_slides.md)
+- Feedback: [Topic 05: Data Integration](https://github.com/mmoessler/ukudla-intro-ds-public-material/discussions/6)
 
 ---
 

@@ -2,8 +2,9 @@
 
 ---
 
-- Last Update: 2026-09-03
-- Source: [04_02_data_management_concepts.md](/learning-modules/intro-ds-module/04_02_data_management_concepts.md)
+- Source: [04_02_data_management_concepts.md](https://github.com/mmoessler/ukudla-intro-ds-public-material/blob/main/04_02_data_management_concepts.md)
+- History: [Commit History](https://github.com/mmoessler/ukudla-intro-ds-public-material/commits/main/04_02_data_management_concepts.md)
+- Feedback: [Topic 04: Data Management](https://github.com/mmoessler/ukudla-intro-ds-public-material/discussions/5)
 
 ---
 

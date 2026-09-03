@@ -2,8 +2,9 @@
 
 ---
 
-- Last Update: 2026-09-03
-- Source: [09_02_explanatory_analysis_concepts.md](/learning-modules/intro-ds-module/09_02_explanatory_analysis_concepts.md)
+- Source: [09_02_explanatory_analysis_concepts.md](https://github.com/mmoessler/ukudla-intro-ds-public-material/blob/main/09_02_explanatory_analysis_concepts.md)
+- History: [Commit History](https://github.com/mmoessler/ukudla-intro-ds-public-material/commits/main/09_02_explanatory_analysis_concepts.md)
+- Feedback: [Topic 09: Explanatory Analysis](https://github.com/mmoessler/ukudla-intro-ds-public-material/discussions/10)
 - Estimated reading time: 60 minutes
 - Estimated activity time: 30 minutes
 

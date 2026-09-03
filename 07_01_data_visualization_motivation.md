@@ -2,8 +2,9 @@
 
 ---
 
-- Last Update: 2026-09-03
-- Source: [07_01_data_visualization_motivation.md](/learning-modules/intro-ds-module/07_01_data_visualization_motivation.md)
+- Source: [07_01_data_visualization_motivation.md](https://github.com/mmoessler/ukudla-intro-ds-public-material/blob/main/07_01_data_visualization_motivation.md)
+- History: [Commit History](https://github.com/mmoessler/ukudla-intro-ds-public-material/commits/main/07_01_data_visualization_motivation.md)
+- Feedback: [Topic 07: Data Visualization](https://github.com/mmoessler/ukudla-intro-ds-public-material/discussions/8)
 - Estimated reading time: 20 minutes
 - Estimated activity time: 10 minutes
 

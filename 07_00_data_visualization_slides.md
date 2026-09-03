@@ -2,8 +2,9 @@
 
 ---
 
-- Last Update: 2026-08-28
-- Source: [07_00_data_visualization_slides.md](/learning-modules/intro-ds-module/07_00_data_visualization_slides.md)
+- Source: [07_00_data_visualization_slides.md](https://github.com/mmoessler/ukudla-intro-ds-public-material/blob/main/07_00_data_visualization_slides.md)
+- History: [Commit History](https://github.com/mmoessler/ukudla-intro-ds-public-material/commits/main/07_00_data_visualization_slides.md)
+- Feedback: [Topic 07: Data Visualization](https://github.com/mmoessler/ukudla-intro-ds-public-material/discussions/8)
 
 ---
 

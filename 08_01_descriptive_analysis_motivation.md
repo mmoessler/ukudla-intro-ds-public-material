@@ -2,8 +2,9 @@
 
 ---
 
-- Last Update: 2026-09-03
-- Source: [08_01_descriptive_analysis_motivation.md](/learning-modules/intro-ds-module/08_01_descriptive_analysis_motivation.md)
+- Source: [08_01_descriptive_analysis_motivation.md](https://github.com/mmoessler/ukudla-intro-ds-public-material/blob/main/08_01_descriptive_analysis_motivation.md)
+- History: [Commit History](https://github.com/mmoessler/ukudla-intro-ds-public-material/commits/main/08_01_descriptive_analysis_motivation.md)
+- Feedback: [Topic 08: Descriptive Analysis](https://github.com/mmoessler/ukudla-intro-ds-public-material/discussions/9)
 - Estimated reading time: 20 minutes
 - Estimated activity time: 10 minutes
 

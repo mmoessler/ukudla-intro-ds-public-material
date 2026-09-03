@@ -2,8 +2,9 @@
 
 ---
 
-- Last Update: 2026-09-03
-- Source: [08_02_descriptive_analysis_concepts.md](/learning-modules/intro-ds-module/08_02_descriptive_analysis_concepts.md)
+- Source: [08_02_descriptive_analysis_concepts.md](https://github.com/mmoessler/ukudla-intro-ds-public-material/blob/main/08_02_descriptive_analysis_concepts.md)
+- History: [Commit History](https://github.com/mmoessler/ukudla-intro-ds-public-material/commits/main/08_02_descriptive_analysis_concepts.md)
+- Feedback: [Topic 08: Descriptive Analysis](https://github.com/mmoessler/ukudla-intro-ds-public-material/discussions/9)
 - Estimated reading time: 60 minutes
 - Estimated activity time: 30 minutes
 

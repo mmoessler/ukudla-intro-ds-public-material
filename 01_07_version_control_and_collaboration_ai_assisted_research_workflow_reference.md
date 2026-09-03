@@ -2,8 +2,9 @@
 
 ---
 
-- Last Update: 2026-09-03
-- Source: [01_07_version_control_and_collaboration_ai_assisted_research_workflow_reference.md](/learning-modules/intro-ds-module/01_07_version_control_and_collaboration_ai_assisted_research_workflow_reference.md)
+- Source: [01_07_version_control_and_collaboration_ai_assisted_research_workflow_reference.md](https://github.com/mmoessler/ukudla-intro-ds-public-material/blob/main/01_07_version_control_and_collaboration_ai_assisted_research_workflow_reference.md)
+- History: [Commit History](https://github.com/mmoessler/ukudla-intro-ds-public-material/commits/main/01_07_version_control_and_collaboration_ai_assisted_research_workflow_reference.md)
+- Feedback: [Topic 01: Version Control and Collaboration](https://github.com/mmoessler/ukudla-intro-ds-public-material/discussions/2)
 
 ---
 

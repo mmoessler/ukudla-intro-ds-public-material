@@ -2,8 +2,9 @@
 
 ---
 
-- Last Update: 2026-09-03
-- Source: [07_03_data_visualization_application.md](/learning-modules/intro-ds-module/07_03_data_visualization_application.md)
+- Source: [07_03_data_visualization_application.md](https://github.com/mmoessler/ukudla-intro-ds-public-material/blob/main/07_03_data_visualization_application.md)
+- History: [Commit History](https://github.com/mmoessler/ukudla-intro-ds-public-material/commits/main/07_03_data_visualization_application.md)
+- Feedback: [Topic 07: Data Visualization](https://github.com/mmoessler/ukudla-intro-ds-public-material/discussions/8)
 - Estimated completion time: 6–8 hours
 - Independent extension: 2–3 hours
 - Prerequisites: Motivation and Concepts pages; completed Data Preparation workflow

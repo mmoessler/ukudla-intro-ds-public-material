@@ -2,8 +2,9 @@
 
 ---
 
-- Last Update: 2026-08-01
-- Source: [02_00_reproducible_environments_slides.md](/learning-modules/intro-ds-module/02_00_reproducible_environments_slides.md)
+- Source: [02_00_reproducible_environments_slides.md](https://github.com/mmoessler/ukudla-intro-ds-public-material/blob/main/02_00_reproducible_environments_slides.md)
+- History: [Commit History](https://github.com/mmoessler/ukudla-intro-ds-public-material/commits/main/02_00_reproducible_environments_slides.md)
+- Feedback: [Topic 02: Reproducible Environments](https://github.com/mmoessler/ukudla-intro-ds-public-material/discussions/3)
 
 ---
 

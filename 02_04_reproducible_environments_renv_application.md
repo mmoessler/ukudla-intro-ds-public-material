@@ -2,8 +2,9 @@
 
 ---
 
-- Last Update: 2026-08-29
-- Source: [02_04_reproducible_environments_renv_application.md](/learning-modules/intro-ds-module/02_04_reproducible_environments_renv_application.md)
+- Source: [02_04_reproducible_environments_renv_application.md](https://github.com/mmoessler/ukudla-intro-ds-public-material/blob/main/02_04_reproducible_environments_renv_application.md)
+- History: [Commit History](https://github.com/mmoessler/ukudla-intro-ds-public-material/commits/main/02_04_reproducible_environments_renv_application.md)
+- Feedback: [Topic 02: Reproducible Environments](https://github.com/mmoessler/ukudla-intro-ds-public-material/discussions/3)
 
 ---
 

@@ -2,8 +2,9 @@
 
 ---
 
-- Last Update: 2026-08-28
-- Source: [08_00_descriptive_analysis_slides.md](/learning-modules/intro-ds-module/08_00_descriptive_analysis_slides.md)
+- Source: [08_00_descriptive_analysis_slides.md](https://github.com/mmoessler/ukudla-intro-ds-public-material/blob/main/08_00_descriptive_analysis_slides.md)
+- History: [Commit History](https://github.com/mmoessler/ukudla-intro-ds-public-material/commits/main/08_00_descriptive_analysis_slides.md)
+- Feedback: [Topic 08: Descriptive Analysis](https://github.com/mmoessler/ukudla-intro-ds-public-material/discussions/9)
 
 ---
 

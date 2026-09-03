@@ -2,8 +2,9 @@
 
 ---
 
-- Last Update: 2026-09-03
-- Source: [08_03_descriptive_analysis_application.md](/learning-modules/intro-ds-module/08_03_descriptive_analysis_application.md)
+- Source: [08_03_descriptive_analysis_application.md](https://github.com/mmoessler/ukudla-intro-ds-public-material/blob/main/08_03_descriptive_analysis_application.md)
+- History: [Commit History](https://github.com/mmoessler/ukudla-intro-ds-public-material/commits/main/08_03_descriptive_analysis_application.md)
+- Feedback: [Topic 08: Descriptive Analysis](https://github.com/mmoessler/ukudla-intro-ds-public-material/discussions/9)
 - Estimated completion time: 6–8 hours
 - Independent extension: 2–3 hours
 - Prerequisites: Motivation and Concepts pages; completed Data Visualization workflow

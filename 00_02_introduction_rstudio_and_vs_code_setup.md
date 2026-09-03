@@ -2,8 +2,9 @@
 
 ---
 
-- Last Update: 2026-08-01
-- Source: [00_02_introduction_rstudio_and_vs_code_setup.md](/learning-modules/intro-ds-module/00_02_introduction_rstudio_and_vs_code_setup.md)
+- Source: [00_02_introduction_rstudio_and_vs_code_setup.md](https://github.com/mmoessler/ukudla-intro-ds-public-material/blob/main/00_02_introduction_rstudio_and_vs_code_setup.md)
+- History: [Commit History](https://github.com/mmoessler/ukudla-intro-ds-public-material/commits/main/00_02_introduction_rstudio_and_vs_code_setup.md)
+- Feedback: [Topic 00: Introduction](https://github.com/mmoessler/ukudla-intro-ds-public-material/discussions/1)
 
 ---
 

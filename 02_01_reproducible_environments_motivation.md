@@ -2,8 +2,9 @@
 
 ---
 
-- Last Update: 2026-08-29
-- Source: [02_01_reproducible_environments_motivation.md](/learning-modules/intro-ds-module/02_01_reproducible_environments_motivation.md)
+- Source: [02_01_reproducible_environments_motivation.md](https://github.com/mmoessler/ukudla-intro-ds-public-material/blob/main/02_01_reproducible_environments_motivation.md)
+- History: [Commit History](https://github.com/mmoessler/ukudla-intro-ds-public-material/commits/main/02_01_reproducible_environments_motivation.md)
+- Feedback: [Topic 02: Reproducible Environments](https://github.com/mmoessler/ukudla-intro-ds-public-material/discussions/3)
 
 ---
 

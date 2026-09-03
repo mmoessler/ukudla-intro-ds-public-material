@@ -2,8 +2,9 @@
 
 ---
 
-- Last Update: 2026-09-03
-- Source: [03_04_remote_computing_linux_application.md](/learning-modules/intro-ds-module/03_04_remote_computing_linux_application.md)
+- Source: [03_04_remote_computing_linux_application.md](https://github.com/mmoessler/ukudla-intro-ds-public-material/blob/main/03_04_remote_computing_linux_application.md)
+- History: [Commit History](https://github.com/mmoessler/ukudla-intro-ds-public-material/commits/main/03_04_remote_computing_linux_application.md)
+- Feedback: [Topic 03: Remote Computing](https://github.com/mmoessler/ukudla-intro-ds-public-material/discussions/4)
 
 ---
 

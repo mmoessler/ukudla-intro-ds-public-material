@@ -2,8 +2,9 @@
 
 ---
 
-- Last Update: 2026-08-01
-- Source: [03_00_remote_computing_slides.md](/learning-modules/intro-ds-module/03_00_remote_computing_slides.md)
+- Source: [03_00_remote_computing_slides.md](https://github.com/mmoessler/ukudla-intro-ds-public-material/blob/main/03_00_remote_computing_slides.md)
+- History: [Commit History](https://github.com/mmoessler/ukudla-intro-ds-public-material/commits/main/03_00_remote_computing_slides.md)
+- Feedback: [Topic 03: Remote Computing](https://github.com/mmoessler/ukudla-intro-ds-public-material/discussions/4)
 
 ---
 

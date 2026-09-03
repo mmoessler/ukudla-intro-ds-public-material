@@ -2,8 +2,9 @@
 
 ---
 
-- Last Update: 2026-09-03
-- Source: [09_03_explanatory_analysis_application.md](/learning-modules/intro-ds-module/09_03_explanatory_analysis_application.md)
+- Source: [09_03_explanatory_analysis_application.md](https://github.com/mmoessler/ukudla-intro-ds-public-material/blob/main/09_03_explanatory_analysis_application.md)
+- History: [Commit History](https://github.com/mmoessler/ukudla-intro-ds-public-material/commits/main/09_03_explanatory_analysis_application.md)
+- Feedback: [Topic 09: Explanatory Analysis](https://github.com/mmoessler/ukudla-intro-ds-public-material/discussions/10)
 - Estimated completion time: 6–8 hours
 - Independent extension: 2–3 hours
 - Prerequisites: Motivation and Concepts pages; completed Descriptive Data Analysis workflow

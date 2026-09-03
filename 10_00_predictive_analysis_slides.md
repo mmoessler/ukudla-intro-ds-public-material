@@ -2,8 +2,9 @@
 
 ---
 
-- Last Update: 2026-08-28
-- Source: [10_00_predictive_analysis_slides.md](/learning-modules/intro-ds-module/10_00_predictive_analysis_slides.md)
+- Source: [10_00_predictive_analysis_slides.md](https://github.com/mmoessler/ukudla-intro-ds-public-material/blob/main/10_00_predictive_analysis_slides.md)
+- History: [Commit History](https://github.com/mmoessler/ukudla-intro-ds-public-material/commits/main/10_00_predictive_analysis_slides.md)
+- Feedback: [Topic 10: Predictive Analysis](https://github.com/mmoessler/ukudla-intro-ds-public-material/discussions/11)
 
 ---
 

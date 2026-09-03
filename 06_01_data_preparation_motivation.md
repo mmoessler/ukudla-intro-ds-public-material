@@ -2,8 +2,9 @@
 
 ---
 
-- Last Update: 2026-09-03
-- Source: [06_01_data_preparation_motivation.md](/learning-modules/intro-ds-module/06_01_data_preparation_motivation.md)
+- Source: [06_01_data_preparation_motivation.md](https://github.com/mmoessler/ukudla-intro-ds-public-material/blob/main/06_01_data_preparation_motivation.md)
+- History: [Commit History](https://github.com/mmoessler/ukudla-intro-ds-public-material/commits/main/06_01_data_preparation_motivation.md)
+- Feedback: [Topic 06: Data Preparation](https://github.com/mmoessler/ukudla-intro-ds-public-material/discussions/7)
 
 ---
 

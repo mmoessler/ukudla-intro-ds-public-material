@@ -2,8 +2,9 @@
 
 ---
 
-- Last Update: 2026-08-01
-- Source: [01_00_version_control_and_collaboration_slides.md](/learning-modules/intro-ds-module/01_00_version_control_and_collaboration_slides.md)
+- Source: [01_00_version_control_and_collaboration_slides.md](https://github.com/mmoessler/ukudla-intro-ds-public-material/blob/main/01_00_version_control_and_collaboration_slides.md)
+- History: [Commit History](https://github.com/mmoessler/ukudla-intro-ds-public-material/commits/main/01_00_version_control_and_collaboration_slides.md)
+- Feedback: [Topic 01: Version Control and Collaboration](https://github.com/mmoessler/ukudla-intro-ds-public-material/discussions/2)
 
 ---
 

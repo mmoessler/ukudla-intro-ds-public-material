@@ -2,8 +2,9 @@
 
 ---
 
-- Last Update: 2026-08-29
-- Source: [02_02_reproducible_environments_concepts.md](/learning-modules/intro-ds-module/02_02_reproducible_environments_concepts.md)
+- Source: [02_02_reproducible_environments_concepts.md](https://github.com/mmoessler/ukudla-intro-ds-public-material/blob/main/02_02_reproducible_environments_concepts.md)
+- History: [Commit History](https://github.com/mmoessler/ukudla-intro-ds-public-material/commits/main/02_02_reproducible_environments_concepts.md)
+- Feedback: [Topic 02: Reproducible Environments](https://github.com/mmoessler/ukudla-intro-ds-public-material/discussions/3)
 
 ---
 

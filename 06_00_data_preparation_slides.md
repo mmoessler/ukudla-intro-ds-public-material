@@ -2,8 +2,9 @@
 
 ---
 
-- Last Update: 2026-08-28
-- Source: [06_00_data_preparation_slides.md](/learning-modules/intro-ds-module/06_00_data_preparation_slides.md)
+- Source: [06_00_data_preparation_slides.md](https://github.com/mmoessler/ukudla-intro-ds-public-material/blob/main/06_00_data_preparation_slides.md)
+- History: [Commit History](https://github.com/mmoessler/ukudla-intro-ds-public-material/commits/main/06_00_data_preparation_slides.md)
+- Feedback: [Topic 06: Data Preparation](https://github.com/mmoessler/ukudla-intro-ds-public-material/discussions/7)
 
 ---
 

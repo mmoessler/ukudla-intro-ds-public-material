@@ -2,8 +2,9 @@
 
 ---
 
-- Last Update: 2026-09-03
-- Source: [04_01_data_management_motivation.md](/learning-modules/intro-ds-module/04_01_data_management_motivation.md)
+- Source: [04_01_data_management_motivation.md](https://github.com/mmoessler/ukudla-intro-ds-public-material/blob/main/04_01_data_management_motivation.md)
+- History: [Commit History](https://github.com/mmoessler/ukudla-intro-ds-public-material/commits/main/04_01_data_management_motivation.md)
+- Feedback: [Topic 04: Data Management](https://github.com/mmoessler/ukudla-intro-ds-public-material/discussions/5)
 
 ---
 

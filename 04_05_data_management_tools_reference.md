@@ -2,8 +2,9 @@
 
 ---
 
-- Last Update: 2026-09-03
-- Source: [04_05_data_management_tools_reference.md](/learning-modules/intro-ds-module/04_05_data_management_tools_reference.md)
+- Source: [04_05_data_management_tools_reference.md](https://github.com/mmoessler/ukudla-intro-ds-public-material/blob/main/04_05_data_management_tools_reference.md)
+- History: [Commit History](https://github.com/mmoessler/ukudla-intro-ds-public-material/commits/main/04_05_data_management_tools_reference.md)
+- Feedback: [Topic 04: Data Management](https://github.com/mmoessler/ukudla-intro-ds-public-material/discussions/5)
 
 ---
 

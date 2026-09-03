@@ -2,8 +2,9 @@
 
 ---
 
-- Last Update: 2026-08-02
-- Source: [02_05_reproducible_environments_docker_setup.md](/learning-modules/intro-ds-module/02_05_reproducible_environments_docker_setup.md)
+- Source: [02_05_reproducible_environments_docker_setup.md](https://github.com/mmoessler/ukudla-intro-ds-public-material/blob/main/02_05_reproducible_environments_docker_setup.md)
+- History: [Commit History](https://github.com/mmoessler/ukudla-intro-ds-public-material/commits/main/02_05_reproducible_environments_docker_setup.md)
+- Feedback: [Topic 02: Reproducible Environments](https://github.com/mmoessler/ukudla-intro-ds-public-material/discussions/3)
 
 ---
 

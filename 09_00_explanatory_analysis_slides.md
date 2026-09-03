@@ -2,8 +2,9 @@
 
 ---
 
-- Last Update: 2026-08-28
-- Source: [09_00_explanatory_analysis_slides.md](/learning-modules/intro-ds-module/09_00_explanatory_analysis_slides.md)
+- Source: [09_00_explanatory_analysis_slides.md](https://github.com/mmoessler/ukudla-intro-ds-public-material/blob/main/09_00_explanatory_analysis_slides.md)
+- History: [Commit History](https://github.com/mmoessler/ukudla-intro-ds-public-material/commits/main/09_00_explanatory_analysis_slides.md)
+- Feedback: [Topic 09: Explanatory Analysis](https://github.com/mmoessler/ukudla-intro-ds-public-material/discussions/10)
 
 ---
 

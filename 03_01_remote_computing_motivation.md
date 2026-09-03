@@ -2,8 +2,9 @@
 
 ---
 
-- Last Update: 2026-08-02
-- Source: [03_01_remote_computing_motivation.md](/learning-modules/intro-ds-module/03_01_remote_computing_motivation.md)
+- Source: [03_01_remote_computing_motivation.md](https://github.com/mmoessler/ukudla-intro-ds-public-material/blob/main/03_01_remote_computing_motivation.md)
+- History: [Commit History](https://github.com/mmoessler/ukudla-intro-ds-public-material/commits/main/03_01_remote_computing_motivation.md)
+- Feedback: [Topic 03: Remote Computing](https://github.com/mmoessler/ukudla-intro-ds-public-material/discussions/4)
 
 ---
 

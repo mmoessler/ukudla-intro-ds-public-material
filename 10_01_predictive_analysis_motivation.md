@@ -2,8 +2,9 @@
 
 ---
 
-- Last Update: 2026-09-03
-- Source: [10_01_predictive_analysis_motivation.md](/learning-modules/intro-ds-module/10_01_predictive_analysis_motivation.md)
+- Source: [10_01_predictive_analysis_motivation.md](https://github.com/mmoessler/ukudla-intro-ds-public-material/blob/main/10_01_predictive_analysis_motivation.md)
+- History: [Commit History](https://github.com/mmoessler/ukudla-intro-ds-public-material/commits/main/10_01_predictive_analysis_motivation.md)
+- Feedback: [Topic 10: Predictive Analysis](https://github.com/mmoessler/ukudla-intro-ds-public-material/discussions/11)
 - Estimated reading time: 20 minutes
 - Estimated activity time: 10 minutes
 

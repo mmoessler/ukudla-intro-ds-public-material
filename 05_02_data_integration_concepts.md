@@ -2,8 +2,9 @@
 
 ---
 
-- Last Update: 2026-09-03
-- Source: [05_02_data_integration_concepts.md](/learning-modules/intro-ds-module/05_02_data_integration_concepts.md)
+- Source: [05_02_data_integration_concepts.md](https://github.com/mmoessler/ukudla-intro-ds-public-material/blob/main/05_02_data_integration_concepts.md)
+- History: [Commit History](https://github.com/mmoessler/ukudla-intro-ds-public-material/commits/main/05_02_data_integration_concepts.md)
+- Feedback: [Topic 05: Data Integration](https://github.com/mmoessler/ukudla-intro-ds-public-material/discussions/6)
 
 ---
 
